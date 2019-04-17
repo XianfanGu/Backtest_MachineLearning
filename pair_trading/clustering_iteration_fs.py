@@ -34,7 +34,7 @@ import datetime as dt
 
 N_PRIN_COMPONENTS = 12
 SYMBOL = 'SPY'
-pathname = 'constituents.csv'
+pathname = '../constituents.csv'
 
 
 def initialize(context):
@@ -169,6 +169,7 @@ def create_model(context, data):
             # print(recent_high)
             info.append({'vol': sum(recent_volume) / context.history_range, 'stock': symbol_})
             price_stocks_list[symbol_] = recent_prices
+	#get the moving training window
             train_, target_ = getTrainingWindow(recent_high, recent_low, recent_prices, recent_volume, sectors[symbol_])
             X_normalized_ = preprocessing.normalize(train_, norm='l2')
             y = np.delete(target_, 0, 1)
@@ -176,6 +177,7 @@ def create_model(context, data):
             sc = preprocessing.MinMaxScaler()
             sc.fit(X_normalized_)
             X_std = sc.transform(X_normalized_)
+	# feature selection to input features (N_PRIN_COMPONENTS)
             X_new = SelectKBest(chi2, k=N_PRIN_COMPONENTS).fit_transform(X_std, y)
             X_train, y_train = X_new, y
             X[symbol_] = []
@@ -189,6 +191,7 @@ def create_model(context, data):
     stock_cluster_id = {}
     print("feature number:", train_.shape[1])
     print("feature selection feature number:", X_train.shape[1])
+# iteration of clustering and create the lists of id of clusters in every clustering
     for i in range(len(y_train)):
         train_1 = []
         for symbol_ in context.SP500_symbol:
@@ -227,6 +230,7 @@ def create_model(context, data):
     new_clusters = cluster_base_simlilarity(context, stock_cluster_id, 0.55)
     # print(len(stock_cluster_id['AAPL']),len(y_train))
     i = 0
+
     for cluster_ in new_clusters:
         label_list_2.append(label_list_2_id)
         print(cluster_)
@@ -245,9 +249,7 @@ def create_model(context, data):
         except Exception as error:
             pass
     y_pred_2 = np.array(y_pred_2)
-
-
-
+# DBScan clustering model
     label_list = unique(y_pred)
     print(len(y_pred))
     print(label_list)
@@ -256,6 +258,7 @@ def create_model(context, data):
     X_axis = pca.fit_transform(X_std_1)
     X_axis = np.array(X_axis)
     fig = plt.figure()
+#scatter plot iteration of clustering
     for y_i in label_list:
         color = np.random.rand(3, )
         print(color)
@@ -272,7 +275,7 @@ def create_model(context, data):
             textcoords='offset points', ha='right', va='bottom',
             bbox=dict(boxstyle='round,pad=0.2', fc='white', alpha=0.5))
     plt.show()
-    fig.savefig('output_img/fs_1.png')
+    fig.savefig('../output_img/fs_1.png')
 
 
     print(label_list_2)
@@ -296,7 +299,7 @@ def create_model(context, data):
             textcoords='offset points', ha='right', va='bottom',
             bbox=dict(boxstyle='round,pad=0.2', fc='white', alpha=0.5))
     plt.show()
-    fig.savefig('output_img/fs_2.png')
+    fig.savefig('../output_img/fs_2.png')
 
     max_list = getMaxVolumeInClusters(n_clusters_, cluster, info)
     print(max_list)
@@ -328,6 +331,7 @@ def daily_return(input_):
             prev = latter_
     return output_
 
+#create dictionary for sectors, read sectors from csv
 def readCSV(pathname):
     n = 0
     mydict = {}
@@ -354,7 +358,7 @@ def iterateCreateID(namelist):
             id = id + 1
     return idDict
 
-def createBySector():
+#def createBySector():
 
 def plotDataByDate(cluster_tags, data, time_range,ylabel,xlabel):
     print(len(cluster_tags))
@@ -635,7 +639,7 @@ def getSector(length, sector):
         date = date + 1
     return Sector_
 
-
+#merge two matrice to one in x axis
 def mergeMatrice(Matrix_A, Matrix_B):
     return np.concatenate((np.delete(Matrix_A, 0, 1), np.delete(Matrix_B, 0, 1)), axis=1)
 
@@ -689,7 +693,7 @@ def getTarget(price, threshold, horizon):
 
 
 def getTrainingWindow(high, low, prices, volume, sector):
-    # Query historical pricing data for AAPL
+    # Query historical pricing data
     date = 1
     MA_ = getMA(prices)
     PM_ = getPM(prices)
@@ -738,5 +742,5 @@ perf_manual = run_algorithm(start=start, end=end, capital_base=10000000.0, initi
                             bundle='custom-na-csvdir-bundle')
 
 # Print
-perf_manual.to_csv(SYMBOL+'_output.csv')
+#perf_manual.to_csv(SYMBOL+'_output.csv')
 

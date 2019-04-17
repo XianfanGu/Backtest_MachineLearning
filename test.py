@@ -31,24 +31,7 @@ def initialize(context):
     context.orders_submitted = False
     large_num = 9999999
     least_num = 0
-    context.n_components = 11
     context.n_components = 6
-    """
-    context.stocks = [
-        sid(8554),  # SPY: S&P 500
-        sid(2174),  # DIA: Dow Jones
-        sid(19920),  # QQQ: NASDAQ 100
-        sid(21507),  # IJH: S&P MidCap 400
-        sid(33486),  # VEU: Ex-US
-        sid(27102),  # VWO: FTSE Emerging
-        sid(33748),  # RSX: Russia
-        sid(14523),  # EWM: Malaysia
-        sid(35793),  # EPI: India
-        sid(35975),  # TUR: Turkey
-        sid(35084),  # BKF: BRIC
-        sid(36031),  # ASX: Australia
-    ]
-    """
     context.security = symbol(SYMBOL)  # Trade SPY
     set_benchmark(symbol(SYMBOL))  # Set benchmarks
     context.model2 = SVC(kernel='rbf', tol=1e-3, random_state=0, gamma=0.2, C=10.0, verbose=True)  # 8.05 for SVM model

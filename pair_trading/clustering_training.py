@@ -110,7 +110,7 @@ def create_model(context, data):
     if(context.times == 0):
         create_model_clustering(context, data)
 
-
+#create clustering model
 def create_model_clustering(context, data):
     X = {}
     print("test")
@@ -124,14 +124,15 @@ def create_model_clustering(context, data):
             recent_high = data.history(symbol(symbol_), 'high', context.history_range, '1d').values
             recent_low = data.history(symbol(symbol_), 'low', context.history_range, '1d').values
             info.append({'vol': sum(recent_volume) / context.history_range, 'stock': symbol_})
+	#get the moving training window
             train_, target_ = getTrainingWindow(recent_high, recent_low, recent_prices, recent_volume, sectors[symbol_])
-            #print("test")
             X_normalized_ = preprocessing.normalize(train_, norm='l2')
             y = np.delete(target_, 0, 1)
             y = np.ravel(y)
             sc = preprocessing.MinMaxScaler()
             sc.fit(X_normalized_)
             X_std = sc.transform(X_normalized_)
+	# feature selection to input features (N_PRIN_COMPONENTS)
             X_new = SelectKBest(chi2, k=N_PRIN_COMPONENTS).fit_transform(X_std, y)
             X_train, y_train = X_new, y
             X[symbol_] = []
@@ -160,12 +161,13 @@ def create_model_clustering(context, data):
     sc.fit(X_normalized_1)
     X_std_1 = sc.transform(X_normalized_1)
     print(X_std_1)
+# DBScan clustering model
     y_pred = context.model_clustering.fit_predict(X_std_1)
     labels = context.model_clustering.labels_
     n_clusters_ = len(set(labels))
     print("Clusters discovered: ", n_clusters_)
     # print(X_perday)
-
+# list the label of clusters
     label_list = unique(y_pred)
     print(label_list)
     pca = PCA(n_components=2)
@@ -173,6 +175,7 @@ def create_model_clustering(context, data):
     X_axis = pca.fit_transform(X_std_1)
     X_axis = np.array(X_axis)
     fig = plt.figure()
+#scatter plot clusters
     for y_i in label_list:
         color = np.random.rand(3, )
         print(color)
@@ -189,7 +192,7 @@ def create_model_clustering(context, data):
             textcoords='offset points', ha='right', va='bottom',
             bbox=dict(boxstyle='round,pad=0.2', fc='white', alpha=0.5))
     plt.show()
-    fig.savefig('output_img/pca_cluster.png')
+    fig.savefig('/../output_img/pca_cluster.png')
 
     max_list = []
     print(cluster[0])
@@ -207,7 +210,7 @@ def create_model_clustering(context, data):
     context.times = context.times + 1
     return max_list
 
-
+#create dictionary for sectors, read sectors from csv
 def readCSV(pathname):
     n = 0
     mydict = {}
@@ -231,6 +234,7 @@ def unique(list1):
             unique_list.append(x)
     return unique_list
 
+#create new id for new clusters
 def iterateCreateID(namelist):
     idDict = {}
     valDict = {}
@@ -429,7 +433,7 @@ def getSector(length, sector):
         date = date + 1
     return Sector_
 
-
+#merge two matrice to one in x axis
 def mergeMatrice(Matrix_A, Matrix_B):
     return np.concatenate((np.delete(Matrix_A, 0, 1), np.delete(Matrix_B, 0, 1)), axis=1)
 
@@ -440,7 +444,6 @@ def getTarget(price, threshold, horizon):
     price_prev = 0
     labeled_target = []
     for data in price:
-        # print(data)
         if (math.isnan(data)):
             continue
         # price change: one day ratio
@@ -483,7 +486,7 @@ def getTarget(price, threshold, horizon):
 
 
 def getTrainingWindow(high, low, prices, volume, sector):
-    # Query historical pricing data for AAPL
+    # Query historical pricing data
     date = 1
     MA_ = getMA(prices)
     PM_ = getPM(prices)
@@ -553,5 +556,5 @@ end = pd.to_datetime('2018-01-01').tz_localize('US/Eastern')
 perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
 
 # Print
-perf_manual.to_csv(SYMBOL+'_output.csv')
+#perf_manual.to_csv(SYMBOL+'_output.csv')
 

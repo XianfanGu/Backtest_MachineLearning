@@ -30,7 +30,7 @@ import csv
 import datetime as dt
 N_PRIN_COMPONENTS = 7
 SYMBOL = 'SPY'
-pathname = 'constituents.csv'
+pathname = '../constituents.csv'
 def initialize(context):
     """
     Called once at the start of the algorithm.
@@ -122,11 +122,9 @@ def create_model(context, data):
             recent_volume = data.history(symbol(symbol_), 'volume', context.history_range, '1d').values
             recent_high = data.history(symbol(symbol_), 'high', context.history_range, '1d').values
             recent_low = data.history(symbol(symbol_), 'low', context.history_range, '1d').values
-            print(len(recent_prices))
-            #print(context.sector)
-            #print(recent_high)
             info.append({'vol': sum(recent_volume) / context.history_range, 'stock': symbol_})
             price_stocks_list[symbol_] = recent_prices
+	#get the moving training window
             train_, target_ = getTrainingWindow(recent_high,recent_low,recent_prices, recent_volume, sectors[symbol_])
             X_normalized_ = preprocessing.normalize(train_, norm='l2')
             y = np.delete(target_, 0, 1)
@@ -134,6 +132,7 @@ def create_model(context, data):
             sc = StandardScaler()
             sc.fit(X_normalized_)
             X_std = sc.transform(X_normalized_)
+	# PCA to input features (N_PRIN_COMPONENTS)
             pca = PCA(n_components=N_PRIN_COMPONENTS)
             X_pca = pca.fit_transform(X_std)
             X_train, y_train = X_pca, y
@@ -149,6 +148,7 @@ def create_model(context, data):
     stock_cluster_id = {}
     print("feature number:", train_.shape[1])
     print("PCA feature number:", X_train.shape[1])
+#transfer 300 days 3D matrx to 2D matrix by merge days axis with PCA
     for i in range(len(y_train)):
         train_1 = []
         for symbol_ in context.SP500_symbol:
@@ -167,6 +167,7 @@ def create_model(context, data):
         #X_std_1 = sc.transform(X_normalized_1)
         X_std_1 = train_1
         #print(X_std_1)
+# DBScan clustering model
         y_pred = context.model.fit_predict(X_std_1)
         labels = context.model.labels_
         n_clusters_ = len(set(labels))
@@ -184,6 +185,7 @@ def create_model(context, data):
     label_list_2_id = 0
     new_clusters = cluster_base_simlilarity(context, stock_cluster_id, 0.55)
     #print(len(stock_cluster_id['AAPL']),len(y_train))
+# iteration of clustering and create the lists of id of clusters in every clustering
     i = 0
     for cluster_ in new_clusters:
         label_list_2.append(label_list_2_id)
@@ -204,7 +206,7 @@ def create_model(context, data):
             pass
     y_pred_2 = np.array(y_pred_2)
 
-
+# list the label of clusters
     label_list = unique(y_pred)
     print(len(y_pred))
     print(label_list)
@@ -212,6 +214,7 @@ def create_model(context, data):
     cluster = []
     X_axis = pca.fit_transform(X_std_1)
     X_axis = np.array(X_axis)
+#scatter plot iteration of clustering
     for y_i in label_list:
         color = np.random.rand(3, )
         print(color)
@@ -231,6 +234,7 @@ def create_model(context, data):
     print(label_list_2)
     print(len(y_pred_2))
     cluster2 = []
+#scatter plot pca clustering
     for y_i in label_list_2:
         color = np.random.rand(3, )
         print(color)
@@ -260,6 +264,8 @@ def create_model(context, data):
     
     context.times = context.times + 1
     return 1
+
+#create dictionary for sectors, read sectors from csv
 def readCSV(pathname):
     n = 0
     mydict = {}
@@ -553,7 +559,7 @@ def getSector(length, sector):
         Sector_.append([date, sector])
         date = date + 1
     return Sector_
-
+#merge two matrice to one in x axis
 def mergeMatrice(Matrix_A, Matrix_B):
     return np.concatenate((np.delete(Matrix_A, 0, 1), np.delete(Matrix_B, 0, 1)), axis=1)
 
@@ -607,7 +613,7 @@ def getTarget(price, threshold, horizon):
 
 
 def getTrainingWindow(high, low, prices, volume, sector):
-    # Query historical pricing data for AAPL
+    # Query historical pricing data
     date = 1
     MA_ = getMA(prices)
     PM_ = getPM(prices)
