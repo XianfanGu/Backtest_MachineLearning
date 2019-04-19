@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ca21b6-94ee-46d5-a650-60365e49aaf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/clustering_iteration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering_iteration_fs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering_training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_clustering.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backtest_MachineLearning/TA/TA_indicator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TA_indicator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buy_and_hold.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/buy_and_hold.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constituents.csv" beforeDir="false" afterPath="$PROJECT_DIR$/doc/constituents.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Download/download_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pair_trading/clustering_iteration_fs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_iteration_fs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pair_trading/clustering_iteration_pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_iteration_pca.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pair_trading/clustering_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pair_trading/test_clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_pca_pca.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_backtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/plot_backtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_TA.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_TA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,15 +25,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pair_trading/clustering_iteration_fs.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_iteration_fs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="39" selection-start-line="36" selection-end-line="37" selection-end-column="39" />
+              <folding>
+                <element signature="e#81#262#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pair_trading/clustering_training.py">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="490" column="23" selection-start-line="490" selection-start-column="23" selection-end-line="491" selection-end-column="23" />
+            <state relative-caret-position="5895">
+              <caret line="393" selection-start-line="393" selection-end-line="393" />
               <folding>
                 <element signature="e#81#229#0" expanded="true" />
               </folding>
@@ -34,47 +49,107 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TA_indicator.py">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/download">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/TA/TA_indicator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="36" column="88" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#641#2731#0" />
+                <element signature="e#1586#2916#0" />
+                <element signature="e#1886#1966#0" />
+                <element signature="e#2006#2424#0" />
+                <element signature="e#2476#2690#0" />
+                <element signature="e#2730#2969#0" />
+                <element signature="e#5716#5873#0" />
+                <element signature="e#4733#7638#0" />
+                <element signature="e#6065#6242#0" />
+                <element signature="e#6289#6457#0" />
+                <element signature="e#6496#6671#0" />
+                <element signature="e#8844#9146#0" />
+                <element signature="e#8729#9631#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_TA.py">
+        <entry file="file://$PROJECT_DIR$/tests/test_TA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+            <state relative-caret-position="45">
+              <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pair_trading/test_clustering.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Data/Data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pair_trading/clustering_iteration_pca.py">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Download/download_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="79" column="105" selection-start-line="79" selection-start-column="105" selection-end-line="79" selection-end-column="105" />
+            <state relative-caret-position="-153">
+              <caret line="44" column="68" selection-start-line="44" selection-start-column="68" selection-end-line="44" selection-end-column="68" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_pca_pca.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1185">
+              <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_iteration_pca.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3933">
+              <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="20" />
               <folding>
                 <element signature="e#81#229#0" expanded="true" />
+                <element signature="e#1197#7132#0" />
                 <element signature="e#13207#13464#0" />
                 <element signature="e#13500#13765#0" />
                 <element signature="e#13821#14855#0" />
                 <element signature="e#14928#15332#0" />
                 <element signature="e#15406#16533#0" />
                 <element signature="e#16558#16792#0" />
+                <element signature="e#16817#17308#0" />
                 <element signature="e#17345#17389#0" />
                 <element signature="e#17416#17765#0" />
-                <element signature="e#17801#17989#0" />
                 <element signature="e#18015#18226#0" />
                 <element signature="e#18260#18409#0" />
                 <element signature="e#18433#20935#0" />
@@ -104,14 +179,23 @@
       <list>
         <option value="$PROJECT_DIR$/pair_trading/TA_indicator.py" />
         <option value="$PROJECT_DIR$/pair_trading/test_TA.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/pair_trading/Data.py" />
+        <option value="$PROJECT_DIR$/Data.py" />
         <option value="$PROJECT_DIR$/test_TA.py" />
         <option value="$PROJECT_DIR$/TA_indicator.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_iteration_fs.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_iteration_pca.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/test.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/Download/download_csv.py" />
+        <option value="$PROJECT_DIR$/bin/download" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="198" />
-    <option name="y" value="318" />
+    <option name="x" value="459" />
+    <option name="y" value="332" />
     <option name="width" value="2232" />
     <option name="height" value="1108" />
   </component>
@@ -126,11 +210,6 @@
             <path>
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="pair_trading" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -147,7 +226,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/doc" />
+      <recent name="$PROJECT_DIR$/Backtest_MachineLearning/Download" />
+      <recent name="$PROJECT_DIR$/Backtest_MachineLearning/Backtest" />
+      <recent name="$PROJECT_DIR$/Backtest_MachineLearning/TA" />
+      <recent name="$PROJECT_DIR$/Backtest_MachineLearning/Data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -174,15 +257,15 @@
       <updated>1555316578297</updated>
       <workItem from="1555316584595" duration="7531000" />
       <workItem from="1555381166892" duration="14386000" />
-      <workItem from="1555467729103" duration="3910000" />
+      <workItem from="1555467729103" duration="43696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25827000" />
+    <option name="totallyTimeSpent" value="65613000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="198" y="318" width="2232" height="1108" extended-state="0" />
+    <frame x="459" y="332" width="2232" height="1108" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25434583" />
@@ -211,25 +294,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pair_trading/clustering_iteration_pca.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../.PyCharm2018.3/system/python_stubs/-317895036/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -237,24 +302,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pair_trading/clustering_iteration_fs.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pair_trading/clustering_iteration_pca.py">
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Backtest/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="79" column="105" selection-start-line="79" selection-start-column="105" selection-end-line="79" selection-end-column="105" />
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="20" />
           <folding>
             <element signature="e#81#229#0" expanded="true" />
+            <element signature="e#2689#2693#0" />
+            <element signature="e#3430#3921#0" />
+            <element signature="e#4029#4378#0" />
+            <element signature="e#4628#4839#0" />
+            <element signature="e#4873#5022#0" />
+            <element signature="e#5046#7548#0" />
+            <element signature="e#7588#7741#0" />
+            <element signature="e#7774#7918#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_iteration_fs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="39" selection-start-line="36" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="e#81#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_iteration_pca.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3933">
+          <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#81#229#0" expanded="true" />
+            <element signature="e#1197#7132#0" />
             <element signature="e#13207#13464#0" />
             <element signature="e#13500#13765#0" />
             <element signature="e#13821#14855#0" />
             <element signature="e#14928#15332#0" />
             <element signature="e#15406#16533#0" />
             <element signature="e#16558#16792#0" />
+            <element signature="e#16817#17308#0" />
             <element signature="e#17345#17389#0" />
             <element signature="e#17416#17765#0" />
-            <element signature="e#17801#17989#0" />
             <element signature="e#18015#18226#0" />
             <element signature="e#18260#18409#0" />
             <element signature="e#18433#20935#0" />
@@ -266,33 +357,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pair_trading/test_clustering.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pair_trading/clustering_training.py">
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_pca_pca.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="490" column="23" selection-start-line="490" selection-start-column="23" selection-end-line="491" selection-end-column="23" />
+        <state relative-caret-position="1185">
+          <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Data/Data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/clustering_training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5895">
+          <caret line="393" selection-start-line="393" selection-end-line="393" />
           <folding>
             <element signature="e#81#229#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_TA.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_TA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+        <state relative-caret-position="45">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TA_indicator.py">
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Download/download_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="44" column="68" selection-start-line="44" selection-start-column="68" selection-end-line="44" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/download">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/TA/TA_indicator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="36" column="88" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#641#2731#0" />
+            <element signature="e#1586#2916#0" />
+            <element signature="e#1886#1966#0" />
+            <element signature="e#2006#2424#0" />
+            <element signature="e#2476#2690#0" />
+            <element signature="e#2730#2969#0" />
+            <element signature="e#5716#5873#0" />
+            <element signature="e#4733#7638#0" />
+            <element signature="e#6065#6242#0" />
+            <element signature="e#6289#6457#0" />
+            <element signature="e#6496#6671#0" />
+            <element signature="e#8844#9146#0" />
+            <element signature="e#8729#9631#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
