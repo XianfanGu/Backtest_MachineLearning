@@ -17,3 +17,7 @@ class Data(ABC):
     @abstractmethod
     def createDateFrame(self,dates,datalist,tags):
         pass
+
+    @abstractmethod
+    def getInputMatrix(self):
+        pass

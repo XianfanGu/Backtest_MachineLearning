@@ -19,7 +19,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
-from talib import RSI, BBANDS, OBV, EMA, MA, MACD,STOCH, CCI, AD
+from Backtest_MachineLearning.TA.TA_indicator import TA
 import urllib
 from io import StringIO
 import csv
@@ -70,8 +70,8 @@ def create_model(context, data):
     recent_volume = data.history(context.security, 'volume', context.history_range, '1d').values
     recent_high = data.history(context.security, 'high', context.history_range, '1d').values
     recent_low = data.history(context.security, 'low', context.history_range, '1d').values
-
-    train_, target_ = getTrainingWindow(recent_high,recent_low,recent_prices, recent_volume)
+    recent_dates = data.history(context.security, 'price', context.lookback + 1, '1d').index
+    train_, target_ = getTrainingWindow(recent_high,recent_low,recent_prices, recent_volume,recent_dates)
     X_normalized_ = preprocessing.normalize(train_, norm='l2')
     y = np.delete(target_, 0, 1)
     y = np.ravel(y)
@@ -83,176 +83,6 @@ def create_model(context, data):
     X_train, y_train = X_new, y
     model.fit(X_train, y_train)
 
-
-def getMA(price):
-    date = 1
-    ma = []
-    data_sma5 = np.array(MA(price, 5))
-    data_sma10 = np.array(MA(price, 10))
-    data_sma15 = np.array(MA(price, 15))
-    data_sma20 = np.array(MA(price, 20))
-    data_sma60 = np.array(MA(price, 60))
-
-    for data in price:
-        if (math.isnan(data)):
-            continue
-        ma.append([date, data_sma5[date - 1], data_sma10[date - 1], data_sma15[date - 1], data_sma20[date - 1],
-                   data_sma60[date - 1]])
-        date = date + 1
-    return ma
-
-
-def getEMA(volume, mov_date):
-    real = EMA(volume, mov_date)
-    return real
-
-
-def getPVO(volume):
-    PVO = []
-    EMA_12 = getEMA(volume, 12)
-    EMA_26 = getEMA(volume, 26)
-    for date in range(len(volume)):
-        if math.isnan(EMA_12[date]) or math.isnan(EMA_26[date]):
-            PVO.append([date + 1, np.nan])
-        else:
-            PVO.append([date + 1, (EMA_12[date] - EMA_26[date]) / EMA_12[date] * 100])
-    # print(PVO)
-    return PVO
-
-def getSTOCH(high,low,price):
-    date = 1
-    STOCH_ = []
-    fastk, fastd = STOCH(high,low,price)
-    for ele, ele1 in zip(fastk, fastd):
-        STOCH_.append([date, ele, ele1])
-        date = date + 1
-    return STOCH_
-
-def getMACD(price):
-    date = 1
-    MACD_ = []
-    macd, macdsignal, macdhist = MACD(price)
-    for ele,ele1,ele2 in zip(macd, macdsignal, macdhist):
-        MACD_.append([date, ele,ele1,ele2])
-        date = date + 1
-    return MACD_
-
-def getCCI(high,low,price):
-    date = 1
-    CCI_ = []
-    real = CCI(high, low, price)
-    for ele in real:
-        CCI_.append([date, ele])
-        date = date + 1
-    return CCI_
-
-def getPM(price):
-    date = 1
-    PM = []
-    loss = 0
-    gain = 0
-    price_prev = 0
-    price_prev_5 = 0
-    price_prev_10 = 0
-    price_prev_15 = 0
-    price_prev_60 = 0
-    is_delta_5 = 1
-    is_delta_10 = 1
-    is_delta_15 = 1
-    is_delta_60 = 1
-
-    for data in price:
-        # print(data)
-        if (math.isnan(data)):
-            continue
-
-        # price change: one day ratio
-        if (price_prev == 0):
-            price_prev = data
-            price_delta = 0
-            price_ratio = 0
-        else:
-            price_next = data
-            price_delta = price_next - price_prev
-            price_ratio = price_next / price_prev
-            price_prev = price_next
-
-        # price change: five days ratio
-        if (is_delta_5 >= 4 and not math.isnan(price[date - 5 + 1])):
-            price_next_5 = data
-            price_prev_5 = price[date - 5 + 1]
-            price_delta_5 = price_next_5 - price_prev_5
-            price_ratio_5 = price_next_5 / price_prev_5
-        else:
-            price_delta_5 = 0
-            price_ratio_5 = 0
-
-        # price change: ten days ratio
-        if (is_delta_10 >= 9 and not math.isnan(price[date - 10 + 1])):
-            price_next_10 = data
-            price_prev_10 = price[date - 10 + 1]
-            price_delta_10 = price_next_10 - price_prev_10
-            price_ratio_10 = price_next_10 / price_prev_10
-        else:
-            price_delta_10 = 0
-            price_ratio_10 = 0
-
-        # price change: 15 days ratio
-        if (is_delta_15 >= 14 and not math.isnan(price[date - 15 + 1])):
-            price_next_15 = data
-            price_prev_15 = price[date - 15 + 1]
-            price_delta_15 = price_next_15 - price_prev_15
-            price_ratio_15 = price_next_15 / price_prev_15
-        else:
-            price_delta_15 = 0
-            price_ratio_15 = 0
-
-        # price change: 60 days ratio
-        if (is_delta_60 >= 59 and not math.isnan(price[date - 60 + 1])):
-            price_next_60 = data
-            price_prev_60 = price[date - 60 + 1]
-            price_delta_60 = price_next_60 - price_prev_60
-            price_ratio_60 = price_next_60 / price_prev_60
-        else:
-            price_delta_60 = 0
-            price_ratio_60 = 0
-
-        PM.append([date, data, price_ratio, price_ratio_5, price_ratio_10, price_ratio_15, price_ratio_60])
-        date = date + 1
-        is_delta_5 = is_delta_5 + 1
-        is_delta_10 = is_delta_10 + 1
-        is_delta_15 = is_delta_15 + 1
-        is_delta_60 = is_delta_60 + 1
-
-    return PM
-
-def getAD(high,low,price,volume):
-    date = 1
-    AD_ = []
-    real = AD(high, low, price, volume)
-    for ele in real:
-        AD_.append([date, ele])
-        date = date + 1
-    return AD_
-
-def getOBV(price, volume):
-    date = 1
-    OBV_ = []
-    obv = OBV(price, volume)
-    for ele in obv:
-        OBV_.append([date, ele])
-        date = date + 1
-    return OBV_
-
-
-def getRSI(price):
-    date = 1
-    RSI_ = []
-    rsi = RSI(price, timeperiod=14)
-    for ele in rsi:
-        RSI_.append([date, ele])
-        date = date + 1
-    return RSI_
 
 def getSector(length, sector):
     date = 1
@@ -314,29 +144,12 @@ def getTarget(price, threshold, horizon):
     return labeled_target
 
 
-def getTrainingWindow(high, low, prices, volume):
+def getTrainingWindow(high, low, prices, volume,dates):
     # Query historical pricing data
     date = 1
-    MA_ = getMA(prices)
-    PM_ = getPM(prices)
-    OBV_ = getOBV(prices, volume)
-    RSI_ = getRSI(prices)
-    PVO_ = getPVO(volume)
-    STOCH_ = getSTOCH(high, low, prices)
-    MACD_ = getMACD(prices)
-    CCI_ = getCCI(high, low, prices)
-    AD_ = getAD(high, low, prices,volume)
-
-
-    input_data_set_0 = mergeMatrice(MA_, PM_)
-    input_data_set_1 = mergeMatrice(input_data_set_0, OBV_)
-    input_data_set_6 = mergeMatrice(input_data_set_1, RSI_)
-    input_data_set_2 = mergeMatrice(input_data_set_6,PVO_)
-    input_data_set_3 = mergeMatrice(input_data_set_2, STOCH_)
-    input_data_set_4 = mergeMatrice(input_data_set_3, MACD_)
-    input_data_set_5 = mergeMatrice(input_data_set_4, CCI_)
-    input_data_set = mergeMatrice(input_data_set_5, AD_)
-
+    ta_ = TA(dates)
+    ta_.addFeature(['PM', 'EMA', 'OBV', 'MA', 'MACD', 'STOCH', 'CCI', 'AD'], dates, prices, volume, high, low)
+    input_data_set = ta_.getInputMatrix()
     tar = getTarget(prices, 0.015, 4)
     for data in input_data_set:
         # print(len(input_data_set))
@@ -360,7 +173,8 @@ def rebalance(context, data):
     recent_volume = data.history(context.security, 'volume', context.history_range, '1d').values
     recent_high = data.history(context.security, 'high', context.history_range, '1d').values
     recent_low = data.history(context.security, 'low', context.history_range, '1d').values
-    test_, _ = getTrainingWindow(recent_high, recent_low, recent_prices, recent_volume)
+    recent_dates = data.history(context.security, 'price', context.lookback + 1, '1d').index
+    test_, _ = getTrainingWindow(recent_high, recent_low, recent_prices, recent_volume,recent_dates)
     y = np.delete(_, 0, 1)
     y = np.ravel(y)
     X_normalized_ = preprocessing.normalize(test_, norm='l2')
@@ -393,41 +207,6 @@ def rebalance(context, data):
     except Exception as error:
         print('Caught this error: ' + repr(error))
 
-    """        
-    if context.model1: # Check if our model is generated
-
-        # Predict using our model and the recent prices
-        prediction = context.model1.predict(X_test)
-        record(prediction = prediction)
-
-        # Go long if we predict the price will rise, short otherwise
-        if prediction == 1:
-            order_target_percent(context.security, 1.0)
-        elif prediction == 0:
-            order_target_percent(context.security, 0.0)
-        else:
-            order_target_percent(context.security, -1.0)
-    """
-
-"""
-QUERY_URL_JSON = "https://www.alphavantage.co/query?function={REQUEST_TYPE}&outputsize=full&datatype=csv&apikey={KEY}&symbol={SYMBOL}"
-API_KEY = "VKNYIAEYDFJGF1RS"
-def _request_csv(symbol, req_type):
-    with urllib.request.urlopen(QUERY_URL_JSON.format(REQUEST_TYPE=req_type, KEY=API_KEY, SYMBOL=symbol)) as req:
-        data = req.read().decode('utf-8')
-    return data
-
-def get_daily_csv_data(symbol):
-    return _request_csv(symbol, 'TIME_SERIES_DAILY')
-
-start = pd.to_datetime('2016-01-01').tz_localize('US/Eastern')
-end = pd.to_datetime('2018-01-01').tz_localize('US/Eastern')
-# getting amd data from alpha vantage via api
-csv_= get_daily_csv_data('SPY')
-print(type(csv_))
-dataframe_ = pd.read_csv(StringIO(csv_))
-print(dataframe_)
-"""
 
 test_string = ['AAPL', 'ABT', 'ACN', 'ADBE', 'AAP', 'AET', 'AMG', 'ARE', 'AKAM', 'AGN', 'ADS', 'MO', 'AEE', 'AEP', 'AIG',
                    'AMP', 'AME', 'APH', 'ADI', 'APA', 'AMAT', 'AIZ', 'ADSK', 'AZO', 'AVB', 'BLL', 'BK', 'BAX', 'BDX', 'BRK.B',

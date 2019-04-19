@@ -101,7 +101,7 @@ class TA(Data):
                        'data_sma60':data_sma60[index]},ignore_index=True)
             index = index + 1
         """
-        ma,isExist = self.createDateFrame(dates,np.column_stack((price,data_sma5,data_sma10,data_sma15,data_sma20,data_sma60)),['timestamp','price','data_sma5','data_sma10','data_sma15','data_sma20','data_sma60'])
+        ma,isExist = self.createDateFrame(dates,np.column_stack((data_sma5,data_sma10,data_sma15,data_sma20,data_sma60)),['timestamp','data_sma5','data_sma10','data_sma15','data_sma20','data_sma60'])
         #print(ma)
         return ma,isExist
 
@@ -280,3 +280,7 @@ class TA(Data):
             else:
                 date = date + 1
 
+    def getInputMatrix(self):
+        input_window = self.training_window.drop('timestamp',1)
+        print(input_window)
+        return input_window.as_matrix()
