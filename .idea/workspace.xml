@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ca21b6-94ee-46d5-a650-60365e49aaf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/Data/Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Data/Data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/TA/TA_indicator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/TA/TA_indicator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/Data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/Download/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/Download/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/TA/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/TA/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,20 +30,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/setup.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/TA/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/download">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="345">
+              <caret line="23" column="69" lean-forward="true" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -49,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/TA/TA_indicator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="285" column="27" selection-start-line="285" selection-start-column="27" selection-end-line="285" selection-end-column="27" />
+            <state relative-caret-position="210">
+              <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#641#2731#0" />
@@ -66,6 +77,42 @@
                 <element signature="e#8844#9146#0" />
                 <element signature="e#8729#9631#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Backtest/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Data/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Download/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -110,20 +157,20 @@
         <option value="$PROJECT_DIR$/bin/download" />
         <option value="$PROJECT_DIR$/Backtest_MachineLearning/Data/Data.py" />
         <option value="$PROJECT_DIR$/Backtest_MachineLearning/TA/TA_indicator.py" />
-        <option value="$PROJECT_DIR$/Backtest_MachineLearning/__init__.py" />
         <option value="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/test.py" />
-        <option value="$PROJECT_DIR$/Backtest_MachineLearning/TA/__init__.py" />
-        <option value="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/__init__.py" />
-        <option value="$PROJECT_DIR$/Backtest_MachineLearning/Download/__init__.py" />
-        <option value="$PROJECT_DIR$/Backtest_MachineLearning/Data/__init__.py" />
-        <option value="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/Backtest/__init__.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/Data/__init__.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/Download/__init__.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/__init__.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/TA/__init__.py" />
+        <option value="$PROJECT_DIR$/Backtest_MachineLearning/__init__.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="524" />
-    <option name="y" value="332" />
+    <option name="x" value="481" />
+    <option name="y" value="441" />
     <option name="width" value="2232" />
     <option name="height" value="1108" />
   </component>
@@ -143,6 +190,30 @@
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
               <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="Download" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="pair_trading" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="TA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
@@ -179,11 +250,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Backtest_MachineLearning/Backtest" />
       <recent name="$PROJECT_DIR$/Backtest_MachineLearning/Data" />
       <recent name="$PROJECT_DIR$/Backtest_MachineLearning/Download" />
       <recent name="$PROJECT_DIR$/Backtest_MachineLearning/pair_trading" />
-      <recent name="$PROJECT_DIR$/Backtest_MachineLearning/TA" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Backtest_MachineLearning" />
@@ -217,12 +288,12 @@
       <updated>1555316578297</updated>
       <workItem from="1555316584595" duration="7531000" />
       <workItem from="1555381166892" duration="14386000" />
-      <workItem from="1555467729103" duration="48193000" />
+      <workItem from="1555467729103" duration="49036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70110000" />
+    <option name="totallyTimeSpent" value="70953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="524" y="332" width="2232" height="1108" extended-state="0" />
@@ -232,7 +303,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3299285" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -353,10 +424,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#46#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="69" lean-forward="true" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Backtest/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="e#81#229#0" expanded="true" />
+            <element signature="e#8931#10455#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/TA/TA_indicator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="285" column="27" selection-start-line="285" selection-start-column="27" selection-end-line="285" selection-end-column="27" />
+        <state relative-caret-position="210">
+          <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#641#2731#0" />
@@ -375,62 +473,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="e#46#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Backtest/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Data/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Download/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/pair_trading/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/TA/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/Backtest/test.py">
+    <entry file="file://$PROJECT_DIR$/Backtest_MachineLearning/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <element signature="e#81#229#0" expanded="true" />
-            <element signature="e#8931#10455#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>

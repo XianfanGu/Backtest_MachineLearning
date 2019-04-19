@@ -1,7 +1,7 @@
 """
 This is a template algorithm on Quantopian for you to adapt and fill in.
 """
-from Backtest_MachineLearning.TA.TA_indicator import TA
+from toollib.TA.TA_indicator import TA
 from zipline.api import (symbol, set_benchmark, set_long_only, schedule_function, date_rules, time_rules)
 from zipline import run_algorithm
 # Pandas library: https://pandas.pydata.org/

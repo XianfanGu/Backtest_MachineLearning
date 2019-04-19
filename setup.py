@@ -8,13 +8,13 @@ from setuptools import setup
 
 setup(
     # Needed to silence warnings (and to be a worthwhile package)
-    name='Backtest_MachineLearning',
-    url='https://github.com/XianfanGu/Backtest_MachineLearning',
+    name='toollib',
+    url='https://github.com/XianfanGu/toollib',
     author='Xianfan Gu',
     author_email='xianfang@asu.edu',
     scripts=['bin/download'],
     # Needed to actually package something
-    packages=['Backtest_MachineLearning'],
+    packages=['toollib'],
     # Needed for dependencies
     install_requires=['talib','pandas','zipline','sklearn'],
     # *strongly* suggested for sharing

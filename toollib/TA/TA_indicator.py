@@ -1,7 +1,7 @@
 import numpy as np
 import math
 import pandas as pd
-from Backtest_MachineLearning.Data.Data import Data
+from toollib.Data.Data import Data
 from talib import RSI, OBV, EMA, MA, MACD,STOCH, CCI, AD
 
 class TA(Data):

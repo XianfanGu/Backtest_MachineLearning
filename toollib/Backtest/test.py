@@ -19,7 +19,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
-from Backtest_MachineLearning.TA.TA_indicator import TA
+from toollib.TA.TA_indicator import TA
 import urllib
 from io import StringIO
 import csv
