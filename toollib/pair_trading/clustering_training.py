@@ -192,7 +192,7 @@ def create_model_clustering(context, data):
             textcoords='offset points', ha='right', va='bottom',
             bbox=dict(boxstyle='round,pad=0.2', fc='white', alpha=0.5))
     plt.show()
-    fig.savefig('/../output_img/pca_cluster.png')
+    fig.savefig('output_img/pca_cluster.png')
 
     max_list = []
     print(cluster[0])

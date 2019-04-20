@@ -1,5 +1,0 @@
-#!/usr/bin/env python
-
-import toollib.Download.download_csv as tool
-
-tool.download()

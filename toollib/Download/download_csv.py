@@ -6,7 +6,7 @@ from datetime import datetime
 DT_FORMAT = "%Y-%m-%d"
 min_size = 200000
 max_size = 300000
-root_path = '../../'
+
 QUERY_URL_CSV = "https://www.alphavantage.co/query?function={REQUEST_TYPE}&outputsize=full&datatype=csv&apikey={KEY}&symbol={SYMBOL}"
 API_KEY = "VKNYIAEYDFJGF1RS"
 
@@ -21,7 +21,7 @@ def _request_csv(symbol, req_type):
 def format_file(symbol):
     body = []
     try:
-        with open(root_path+'csv/daily/'+symbol+'.csv', "r") as inp:
+        with open('csv/daily/'+symbol+'.csv', "r") as inp:
             START_DATE = datetime.strptime("2006-10-01", DT_FORMAT)
             #print(START_DATE)
 
@@ -29,8 +29,8 @@ def format_file(symbol):
             lastrow = None
             for lastrow in csv.reader(inp): pass
             if(datetime.strptime(lastrow[0], DT_FORMAT)>START_DATE):
-                os.remove(root_path+'csv/daily/'+symbol+'.csv')
-                print("File Removed!",'  '+root_path+'csv/daily/'+symbol+'.csv')
+                os.remove('csv/daily/'+symbol+'.csv')
+                print("File Removed!",'  '+'csv/daily/'+symbol+'.csv')
                 return False
             inp.seek(0)
             for row in csv.reader(inp):
@@ -42,7 +42,7 @@ def format_file(symbol):
                 if(DATE>=START_DATE):
                     body.append(row)
 
-        with open(root_path+'csv/daily/'+symbol+'.csv', "w") as out:
+        with open('csv/daily/'+symbol+'.csv', "w") as out:
             writer = csv.writer(out)
             for row in body:
                 writer.writerow(row)
@@ -51,16 +51,16 @@ def format_file(symbol):
     except Exception as error:
         pass
 
-    os.remove(root_path+'csv/daily/' + symbol + '.csv')
-    print("File Removed!", '  '+root_path+'csv/daily/' + symbol + '.csv')
+    os.remove('csv/daily/' + symbol + '.csv')
+    print("File Removed!", '  '+'csv/daily/' + symbol + '.csv')
     print('Caught this error: format is not correct')
     return False
 
 def checkFileSize(symbol):
     try:
         #dir_path = os.path.dirname(os.path.realpath(__file__))
-        statinfo = os.path.getsize(root_path+'/csv/daily/' + symbol +'.csv')
-        print(root_path+'/csv/daily/' + symbol +'.csv :'+statinfo.__str__())
+        statinfo = os.path.getsize('csv/daily/' + symbol +'.csv')
+        print('csv/daily/' + symbol +'.csv :'+statinfo.__str__())
         if(statinfo <= min_size) or (statinfo >= max_size):
             return False
         else:
@@ -121,3 +121,5 @@ def download():
 
     except Exception as error:
         print('Caught this error1: ' + repr(error))
+
+download()

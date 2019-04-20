@@ -12,7 +12,6 @@ setup(
     url='https://github.com/XianfanGu/toollib',
     author='Xianfan Gu',
     author_email='xianfang@asu.edu',
-    scripts=['bin/download'],
     # Needed to actually package something
     packages=['toollib'],
     # Needed for dependencies

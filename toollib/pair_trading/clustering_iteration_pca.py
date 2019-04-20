@@ -30,8 +30,7 @@ import csv
 import datetime as dt
 N_PRIN_COMPONENTS = 7
 SYMBOL = 'SPY'
-root_path = '../../'
-pathname = '../../doc/constituents.csv'
+pathname = 'doc/constituents.csv'
 def initialize(context):
     """
     Called once at the start of the algorithm.

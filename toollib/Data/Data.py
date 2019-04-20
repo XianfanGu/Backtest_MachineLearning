@@ -3,7 +3,6 @@ import pandas as pd
 
 class Data(ABC):
     def __init__(self,dates):
-        print("run super")
         pass
 
     @abstractmethod

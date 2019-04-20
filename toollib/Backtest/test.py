@@ -24,7 +24,7 @@ import urllib
 from io import StringIO
 import csv
 import datetime as dt
-root_path = '../../'
+
 MODEL_NAME = ''
 SYMBOL = ''
 def initialize(context):
@@ -152,9 +152,7 @@ def getTrainingWindow(high, low, prices, volume,dates):
     input_data_set = ta_.getInputMatrix()
     tar = getTarget(prices, 0.015, 4)
     for data in input_data_set:
-        # print(len(input_data_set))
-        # print(len(tar))
-        if (np.isnan(data).any() or np.isnan(tar[date - 1]).any()):
+        if (any(np.isnan(ele) for ele in data) or np.isnan(tar[date - 1]).any()):
             input_data_set = np.delete(input_data_set, date - 1, 0)
             tar = np.delete(tar, date - 1, 0)
         else:
@@ -247,17 +245,17 @@ end = pd.to_datetime('2018-12-01').tz_localize('US/Eastern')
 model_list = ['SVM','KNeighbors','DecisionTree','RandomForest','LogisticRegression']
 for ele in test_string:
     SYMBOL = ele
-    if(os.path.isfile((root_path+'output/'+SYMBOL+'_SVM_output.csv'))):
-        print(root_path+'output/'+SYMBOL+'_SVM_output.csv is exist')
+    if(os.path.isfile(('output/'+SYMBOL+'_SVM_output.csv'))):
+        print('output/'+SYMBOL+'_SVM_output.csv is exist')
         continue
     else:
-        print(root_path+'output/' + SYMBOL + '_SVM_output.csv is not exist')
+        print('output/' + SYMBOL + '_SVM_output.csv is not exist')
     for model_name in model_list:
         MODEL_NAME = model_name
         perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
 
         # Print
-        perf_manual.to_csv(root_path+'output/'+SYMBOL+'_'+MODEL_NAME+'_output.csv')
+        perf_manual.to_csv('output/'+SYMBOL+'_'+MODEL_NAME+'_output.csv')
 
 
 

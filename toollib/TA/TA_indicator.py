@@ -282,5 +282,4 @@ class TA(Data):
 
     def getInputMatrix(self):
         input_window = self.training_window.drop('timestamp',1)
-        print(input_window)
         return input_window.as_matrix()
