@@ -45,7 +45,7 @@ register(
 
 
 run this command line in terminal
-`zipline ingest -b custom-csvdir-bundle`
+`zipline ingest -b custom-na-csvdir-bundle`
 
 ### Step 3: Run Backtest  ###
 `python3 toollib/Backtest/test.py`
