@@ -14,7 +14,7 @@ class PostInstallCommand(install):
     """Post-installation for installation mode."""
     def run(self):
         # PUT YOUR POST-INSTALL SCRIPT HERE or CALL A FUNCTION
-        #downloader.download()
+        downloader.download()
         config.create_config()
         install.run(self)
 setup(
