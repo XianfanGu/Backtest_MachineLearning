@@ -1,0 +1,7 @@
+# cat requirements.txt
+TA-lib==0.4.17
+zipline
+sklearn
+progressbar
+pandas==0.22
+numpy==1.16.2

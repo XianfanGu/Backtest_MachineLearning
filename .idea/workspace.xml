@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ca21b6-94ee-46d5-a650-60365e49aaf0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toollib/Backtest/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Backtest/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toollib/Download/download_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Download/download_csv.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,45 +19,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toollib/Backtest/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="247" column="60" selection-start-line="247" selection-start-column="60" selection-end-line="247" selection-end-column="60" />
+            <state relative-caret-position="1440">
+              <caret line="96" column="89" lean-forward="true" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
               <folding>
                 <element signature="e#81#229#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_training.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1304">
-              <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
-              <folding>
-                <element signature="e#81#229#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toollib/Backtest/plot_backtest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_fs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4170">
-              <caret line="296" column="21" lean-forward="true" selection-start-line="296" selection-start-column="21" selection-end-line="296" selection-end-column="21" />
-              <folding>
-                <element signature="e#81#262#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toollib/TA/TA_indicator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="144" column="28" lean-forward="true" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
+            <state relative-caret-position="1140">
+              <caret line="284" column="39" lean-forward="true" selection-start-line="284" selection-start-column="39" selection-end-line="284" selection-end-column="39" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#199#293#0" />
@@ -79,11 +48,6 @@
                 <element signature="e#8940#9081#0" />
                 <element signature="e#9134#9266#0" />
                 <element signature="e#9311#9450#0" />
-                <element signature="e#9498#9612#0" />
-                <element signature="e#9655#9975#0" />
-                <element signature="e#10036#10938#0" />
-                <element signature="e#10988#11330#0" />
-                <element signature="e#11370#11493#0" />
               </folding>
             </state>
           </provider>
@@ -101,8 +65,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+            <state relative-caret-position="255">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -110,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_pca.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="-41">
               <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
               <folding>
                 <element signature="e#81#229#0" expanded="true" />
@@ -122,10 +98,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toollib/Download/download_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="649">
+              <caret line="127" column="25" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toollib/Download/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/extension.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,8 +135,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="469">
-                <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+              <first_editor relative-caret-position="255">
+                <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               </first_editor>
               <second_editor />
             </state>
@@ -186,19 +186,23 @@
         <option value="$PROJECT_DIR$/toollib/Backtest/__init__.py" />
         <option value="$PROJECT_DIR$/toollib/TA/TA_indicator.py" />
         <option value="$PROJECT_DIR$/toollib/Data/Data.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/toollib/Download/download_csv.py" />
         <option value="$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_fs.py" />
         <option value="$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_pca.py" />
-        <option value="$PROJECT_DIR$/toollib/Backtest/test.py" />
         <option value="$PROJECT_DIR$/toollib/pair_trading/clustering_training.py" />
+        <option value="$PROJECT_DIR$/toollib/Backtest/test.py" />
+        <option value="$PROJECT_DIR$/doc/download.py" />
+        <option value="$PROJECT_DIR$/toollib/Download/download_csv.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/doc/extension.py" />
+        <option value="$PROJECT_DIR$/toollib/Download/config.py" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
-    <option name="y" value="123" />
+    <option name="x" value="439" />
+    <option name="y" value="316" />
     <option name="width" value="2232" />
     <option name="height" value="1108" />
   </component>
@@ -217,13 +221,18 @@
             <path>
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
               <item name="toollib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
               <item name="toollib" type="462c0819:PsiDirectoryNode" />
-              <item name="Backtest" type="462c0819:PsiDirectoryNode" />
+              <item name="Download" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -278,15 +287,15 @@
       <updated>1555316578297</updated>
       <workItem from="1555316584595" duration="7531000" />
       <workItem from="1555381166892" duration="14386000" />
-      <workItem from="1555467729103" duration="55363000" />
+      <workItem from="1555467729103" duration="72573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77280000" />
+    <option name="totallyTimeSpent" value="94490000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="123" width="2232" height="1108" extended-state="0" />
+    <frame x="439" y="316" width="2232" height="1108" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25434583" />
@@ -386,78 +395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/TA/TA_indicator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="144" column="28" lean-forward="true" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#199#293#0" />
-            <element signature="e#335#568#0" />
-            <element signature="e#646#2736#0" />
-            <element signature="e#2780#4272#0" />
-            <element signature="e#4328#4465#0" />
-            <element signature="e#4511#4974#0" />
-            <element signature="e#5033#5299#0" />
-            <element signature="e#5345#5651#0" />
-            <element signature="e#5707#5844#0" />
-            <element signature="e#5888#8877#0" />
-            <element signature="e#8940#9081#0" />
-            <element signature="e#9134#9266#0" />
-            <element signature="e#9311#9450#0" />
-            <element signature="e#9498#9612#0" />
-            <element signature="e#9655#9975#0" />
-            <element signature="e#10036#10938#0" />
-            <element signature="e#10988#11330#0" />
-            <element signature="e#11370#11493#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Download/download_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_fs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4170">
-          <caret line="296" column="21" lean-forward="true" selection-start-line="296" selection-start-column="21" selection-end-line="296" selection-end-column="21" />
-          <folding>
-            <element signature="e#81#262#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_pca.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding>
-            <element signature="e#81#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_pca_pca.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660">
-          <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_training.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1304">
@@ -477,12 +414,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_fs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4170">
+          <caret line="296" column="21" lean-forward="true" selection-start-line="296" selection-start-column="21" selection-end-line="296" selection-end-column="21" />
+          <folding>
+            <element signature="e#81#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/TA/TA_indicator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="284" column="39" lean-forward="true" selection-start-line="284" selection-start-column="39" selection-end-line="284" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#199#293#0" />
+            <element signature="e#335#568#0" />
+            <element signature="e#646#2736#0" />
+            <element signature="e#2780#4272#0" />
+            <element signature="e#4328#4465#0" />
+            <element signature="e#4511#4974#0" />
+            <element signature="e#5033#5299#0" />
+            <element signature="e#5345#5651#0" />
+            <element signature="e#5707#5844#0" />
+            <element signature="e#5888#8877#0" />
+            <element signature="e#8940#9081#0" />
+            <element signature="e#9134#9266#0" />
+            <element signature="e#9311#9450#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_pca_pca.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/toollib/Backtest/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="247" column="60" selection-start-line="247" selection-start-column="60" selection-end-line="247" selection-end-column="60" />
+        <state relative-caret-position="1440">
+          <caret line="96" column="89" lean-forward="true" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
           <folding>
             <element signature="e#81#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Download/download_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="127" column="25" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_pca.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <folding>
+            <element signature="e#81#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/extension.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Download/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -490,8 +531,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="469">
-            <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+          <first_editor relative-caret-position="255">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           </first_editor>
           <second_editor />
         </state>

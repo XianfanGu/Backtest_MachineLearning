@@ -71,16 +71,17 @@ def create_model(context, data):
     recent_high = data.history(context.security, 'high', context.history_range, '1d').values
     recent_low = data.history(context.security, 'low', context.history_range, '1d').values
     recent_dates = data.history(context.security, 'price', context.lookback + 1, '1d').index
-    train_, target_ = getTrainingWindow(recent_high,recent_low,recent_prices, recent_volume,recent_dates)
-    X_normalized_ = preprocessing.normalize(train_, norm='l2')
+    input_, target_ = getTrainingWindow(recent_high,recent_low,recent_prices, recent_volume,recent_dates)
     y = np.delete(target_, 0, 1)
     y = np.ravel(y)
+    X_train, X_test, y_train, y_test = train_test_split(input_, y, test_size=0.3, random_state=0)
+    X_normalized_ = preprocessing.normalize(X_train, norm='l2')
     sc = preprocessing.MinMaxScaler()
     sc.fit(X_normalized_)
     X_std = sc.transform(X_normalized_)
     # feature selection to input features (context.n_components)
-    X_new = SelectKBest(chi2, k=context.n_components).fit_transform(X_std, y)
-    X_train, y_train = X_new, y
+    X_new = SelectKBest(chi2, k=context.n_components).fit_transform(X_std, y_train)
+    X_train = X_new
     model.fit(X_train, y_train)
 
 
@@ -172,15 +173,16 @@ def rebalance(context, data):
     recent_high = data.history(context.security, 'high', context.history_range, '1d').values
     recent_low = data.history(context.security, 'low', context.history_range, '1d').values
     recent_dates = data.history(context.security, 'price', context.lookback + 1, '1d').index
-    test_, _ = getTrainingWindow(recent_high, recent_low, recent_prices, recent_volume,recent_dates)
+    input_, _ = getTrainingWindow(recent_high, recent_low, recent_prices, recent_volume,recent_dates)
     y = np.delete(_, 0, 1)
     y = np.ravel(y)
-    X_normalized_ = preprocessing.normalize(test_, norm='l2')
+    X_train, X_test, y_train, y_test = train_test_split(input_, y, test_size=0.3, random_state=0)
+    X_normalized_ = preprocessing.normalize(X_test, norm='l2')
     sc = preprocessing.MinMaxScaler()
     sc.fit(X_normalized_)
     X_std = sc.transform(X_normalized_)
     # feature selection to input features (context.n_components)
-    X_new = SelectKBest(chi2, k=context.n_components).fit_transform(X_std, y)
+    X_new = SelectKBest(chi2, k=context.n_components).fit_transform(X_std, y_test)
     X_test = X_new[-1, :]
 
     for stock in context.portfolio.positions:

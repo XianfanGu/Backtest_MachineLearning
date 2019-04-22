@@ -2,6 +2,8 @@ import urllib
 import urllib.request
 import os
 import csv
+import progressbar
+from time import sleep
 from datetime import datetime
 DT_FORMAT = "%Y-%m-%d"
 min_size = 200000
@@ -110,16 +112,23 @@ def download():
                     'WBA', 'DIS', 'WM', 'WAT', 'ANTM', 'WFC', 'WDC', 'WU', 'WY', 'WHR', 'WFM', 'WMB', 'WEC', 'WYN',
                     'WYNN', 'XEL', 'XRX', 'XLNX', 'XL', 'XYL', 'YHOO', 'YUM', 'ZBH', 'ZION', 'ZTS']
 
-    try:
-        for symbol in SP500_symbol:
 
+    bar = progressbar.ProgressBar(maxval=len(SP500_symbol), \
+                                  widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
+    try:
+        i = 0
+        bar.start()
+        for symbol in SP500_symbol:
+            bar.update(i + 1)
+            sleep(0.1)
             if not checkFileSize(symbol):
                 _request_csv(symbol,'TIME_SERIES_DAILY_ADJUSTED')
                 format_file(symbol)
             else:
+                i = i + 1
                 continue
-
+            i = i + 1
+        bar.finish()
     except Exception as error:
         print('Caught this error1: ' + repr(error))
 
-download()
