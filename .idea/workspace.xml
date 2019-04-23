@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ca21b6-94ee-46d5-a650-60365e49aaf0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/extension.py" beforeDir="false" afterPath="$PROJECT_DIR$/doc/extension.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/toollib/Download/download_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Download/download_csv.py" afterDir="false" />
     </list>
@@ -17,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/toollib/Backtest/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1440">
-              <caret line="96" column="89" lean-forward="true" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
+              <caret line="96" column="89" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
               <folding>
                 <element signature="e#81#229#0" expanded="true" />
               </folding>
@@ -50,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="62" lean-forward="true" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+              <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -70,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_pca.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9100">
+            <state relative-caret-position="-9086">
               <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
               <folding>
                 <element signature="e#81#229#0" expanded="true" />
@@ -83,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/toollib/Download/download_csv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="52" />
+              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -185,8 +186,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="508" />
-    <option name="y" value="380" />
+    <option name="x" value="577" />
+    <option name="y" value="108" />
     <option name="width" value="1512" />
     <option name="height" value="1108" />
   </component>
@@ -276,15 +277,15 @@
       <updated>1555316578297</updated>
       <workItem from="1555316584595" duration="7531000" />
       <workItem from="1555381166892" duration="14386000" />
-      <workItem from="1555467729103" duration="76836000" />
+      <workItem from="1555467729103" duration="79206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98753000" />
+    <option name="totallyTimeSpent" value="101123000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="508" y="380" width="1512" height="1108" extended-state="0" />
+    <frame x="577" y="108" width="1512" height="1108" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3792633" />
@@ -436,7 +437,7 @@
     <entry file="file://$PROJECT_DIR$/toollib/Backtest/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
-          <caret line="96" column="89" lean-forward="true" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
+          <caret line="96" column="89" selection-start-line="96" selection-start-column="89" selection-end-line="96" selection-end-column="89" />
           <folding>
             <element signature="e#81#229#0" expanded="true" />
           </folding>
@@ -483,7 +484,7 @@
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="62" lean-forward="true" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -499,7 +500,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_pca.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9100">
+        <state relative-caret-position="-9086">
           <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
           <folding>
             <element signature="e#81#229#0" expanded="true" />
@@ -510,7 +511,7 @@
     <entry file="file://$PROJECT_DIR$/toollib/Download/download_csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="52" />
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
