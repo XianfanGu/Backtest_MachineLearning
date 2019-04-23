@@ -19,7 +19,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
-from toollib.Data.TA import TA
+from toollib.Data.TA.TA_indicator import TA
 
 MODEL_NAME = ''
 SYMBOL = ''
@@ -241,19 +241,22 @@ end = pd.to_datetime('2018-12-01').tz_localize('US/Eastern')
 
 #test_string = ['HPQ']
 model_list = ['SVM','KNeighbors','DecisionTree','RandomForest','LogisticRegression']
-for ele in test_string:
-    SYMBOL = ele
-    if(os.path.isfile(('output/'+SYMBOL+'_SVM_output.csv'))):
-        print('output/'+SYMBOL+'_SVM_output.csv is exist')
-        continue
-    else:
-        print('output/' + SYMBOL + '_SVM_output.csv is not exist')
-    for model_name in model_list:
-        MODEL_NAME = model_name
-        perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
+try:
+    for ele in test_string:
+        SYMBOL = ele
+        if(os.path.isfile(('output/'+SYMBOL+'_SVM_output.csv'))):
+            print('output/'+SYMBOL+'_SVM_output.csv is exist')
+            continue
+        else:
+            print('output/' + SYMBOL + '_SVM_output.csv is not exist')
+        for model_name in model_list:
+            MODEL_NAME = model_name
+            perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
 
-        # Print
-        perf_manual.to_csv('output/'+SYMBOL+'_'+MODEL_NAME+'_output.csv')
+            # Print
+            perf_manual.to_csv('output/'+SYMBOL+'_'+MODEL_NAME+'_output.csv')
+except Exception as error:
+    pass
 
 
 

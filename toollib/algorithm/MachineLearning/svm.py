@@ -200,18 +200,21 @@ def rebalance(context, data):
 #['BAC', 'GNW', 'IPG', 'HOG', 'JPM', 'HCN', 'KSS', 'MDLZ']
 #['BAC', 'INTC', 'SPLS', 'PFE', 'HPQ', 'JPM', 'IPG', 'TROW']
 
-for ele in SnPList:
-    SYMBOL = ele
-    if(os.path.isfile(('output/'+SYMBOL+'_SVM_output.csv'))):
-        print('output/'+SYMBOL+'_SVM_output.csv is exist')
-        continue
-    else:
-        print('output/' + SYMBOL + '_SVM_output.csv is not exist')
+try:
+    for ele in SnPList:
+        print(ele)
+        SYMBOL = ele
+        if(os.path.isfile(('output/'+SYMBOL+'_SVM_output.csv'))):
+            print('output/'+SYMBOL+'_SVM_output.csv is exist')
+            continue
+        else:
+            print('output/' + SYMBOL + '_SVM_output.csv is not exist')
 
-    perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
+        perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
 
-    # Print
-    perf_manual.to_csv('output/'+SYMBOL+'_SVM_output.csv')
-
+        # Print
+        perf_manual.to_csv('output/'+SYMBOL+'_SVM_output.csv')
+except Exception as error:
+    pass
 
 
