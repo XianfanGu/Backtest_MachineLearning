@@ -1,7 +1,8 @@
 """
 This is a template algorithm on Quantopian for you to adapt and fill in.
 """
-from zipline.api import (history,order, record, symbol,order_target_percent,set_benchmark,set_long_only,schedule_function,sid,date_rules,time_rules)
+from zipline.api import (order, record, symbol, order_target_percent, set_benchmark, set_long_only, schedule_function,
+                         date_rules, time_rules)
 from zipline import run_algorithm
 import os.path
 import math
@@ -9,7 +10,6 @@ import numpy as np
 # Pandas library: https://pandas.pydata.org/
 import pandas as pd
 from sklearn import preprocessing
-from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
@@ -19,14 +19,17 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
-from toollib.TA.TA_indicator import TA
-import urllib
-from io import StringIO
-import csv
-import datetime as dt
+from toollib.Data.TA.TA_indicator import TA
+from toollib.Data.info import Info
 
-MODEL_NAME = ''
 SYMBOL = ''
+SnPList = Info(pathname='src/constituents.csv').get_symbol_list()
+
+
+start = pd.to_datetime('2009-01-01').tz_localize('US/Eastern')
+end = pd.to_datetime('2018-12-01').tz_localize('US/Eastern')
+
+
 def initialize(context):
     """
     Called once at the start of the algorithm.
@@ -38,13 +41,7 @@ def initialize(context):
     context.n_components = feature_num
     context.security = symbol(SYMBOL)  # Trade SPY
     set_benchmark(symbol(SYMBOL))  # Set benchmarks
-    context.model2 = SVC(kernel='rbf', tol=1e-3, random_state=0, gamma=0.2, C=10.0, verbose=True)  # 8.05 for SVM model
-    context.model3 = KNeighborsClassifier(n_neighbors=feature_num, p=3, metric='minkowski')  # 7.05 for  model
-    context.model = DecisionTreeClassifier(criterion='entropy', max_depth=feature_num, random_state=0)
-    context.model4 = RandomForestClassifier(criterion='entropy', n_estimators=feature_num, random_state=1,
-                                            n_jobs=2)  # 5.2 for randomforest
-    context.model1 = LogisticRegression(random_state=0, solver='lbfgs', multi_class='multinomial')
-    context.modellist = {'SVM':context.model2,'KNeighbors':context.model3,'DecisionTree':context.model,'RandomForest':context.model4,'LogisticRegression':context.model1}
+    context.model = SVC(kernel='rbf', tol=1e-3, random_state=0, gamma=0.2, C=10.0, verbose=True)  # 8.05 for SVM model
     context.lookback = 350  # Look back 62 days
     context.history_range = 350  # Only consider the past 400 days' history
     context.threshold = 4.05
@@ -65,7 +62,6 @@ def handle_data(context, data):
     pass
 def create_model(context, data):
     # Get the relevant daily prices
-    model = context.modellist[MODEL_NAME]
     recent_prices = data.history(context.security, 'price', context.history_range, '1d').values
     recent_volume = data.history(context.security, 'volume', context.history_range, '1d').values
     recent_high = data.history(context.security, 'high', context.history_range, '1d').values
@@ -82,16 +78,8 @@ def create_model(context, data):
     # feature selection to input features (context.n_components)
     X_new = SelectKBest(chi2, k=context.n_components).fit_transform(X_std, y_train)
     X_train = X_new
-    model.fit(X_train, y_train)
+    context.model.fit(X_train, y_train)
 
-
-def getSector(length, sector):
-    date = 1
-    Sector_ = []
-    for i in range(length):
-        Sector_.append([date, sector])
-        date = date + 1
-    return Sector_
 
 def mergeMatrice(Matrix_A, Matrix_B):
     return np.concatenate((np.delete(Matrix_A, 0, 1), np.delete(Matrix_B, 0, 1)), axis=1)
@@ -149,7 +137,7 @@ def getTrainingWindow(high, low, prices, volume,dates):
     # Query historical pricing data
     date = 1
     ta_ = TA(dates)
-    ta_.addFeature(['PM', 'EMA', 'OBV', 'MA', 'MACD', 'STOCH', 'CCI', 'AD'], dates, prices, volume, high, low)
+    ta_.addFeature(['PM', 'EMA', 'OBV', 'MA', 'MACD', 'STOCH', 'CCI', 'AD'], dates, [prices, volume, high, low])
     input_data_set = ta_.getInputMatrix()
     tar = getTarget(prices, 0.015, 4)
     for data in input_data_set:
@@ -167,7 +155,6 @@ def rebalance(context, data):
     Execute orders according to our schedule_function() timing.
     """
     # Get recent prices
-    model = context.modellist[MODEL_NAME]
     recent_prices = data.history(context.security, 'price', context.history_range, '1d').values
     recent_volume = data.history(context.security, 'volume', context.history_range, '1d').values
     recent_high = data.history(context.security, 'high', context.history_range, '1d').values
@@ -192,11 +179,11 @@ def rebalance(context, data):
         print('Initial orders submitted')
         context.orders_submitted = True
     try:
-        if model:  # Check if our model is generated
+        if context.model:  # Check if our model is generated
             # Predict using our model and the recent prices
             X_test_ = X_test.reshape(1, -1)
-            prediction = model.predict(X_test_)
-            prediction_accuracy = model.predict(X_new[-10:, :])  # predict in past 10 days
+            prediction = context.model.predict(X_test_)
+            prediction_accuracy = context.model.predict(X_new[-10:, :])  # predict in past 10 days
             accuracy = accuracy_score(np.ravel(np.delete(_, 0, 1))[-10:], prediction_accuracy)
             print('Accuracy: %.2f' % accuracy)
             record(accuracy=accuracy)
@@ -208,57 +195,23 @@ def rebalance(context, data):
         print('Caught this error: ' + repr(error))
 
 
-test_string = ['AAPL', 'ABT', 'ACN', 'ADBE', 'AAP', 'AET', 'AMG', 'ARE', 'AKAM', 'AGN', 'ADS', 'MO', 'AEE', 'AEP', 'AIG',
-                   'AMP', 'AME', 'APH', 'ADI', 'APA', 'AMAT', 'AIZ', 'ADSK', 'AZO', 'AVB', 'BLL', 'BK', 'BAX', 'BDX', 'BRK.B',
-                   'HRB', 'BWA', 'BSX', 'CHRW', 'COG', 'CPB', 'CAH', 'KMX', 'CAT', 'CBS', 'CNP', 'CERN', 'SCHW', 'CVX', 'CB', 'XEC',
-                   'CTAS', 'C', 'CLX', 'CMS', 'KO', 'CTSH', 'CMCSA', 'CAG', 'ED', 'GLW', 'CCI', 'CMI', 'DHI', 'DRI', 'DE', 'XRAY',
-                   'DISCA', 'DLTR', 'DOV', 'DTE', 'DUK', 'ETFC', 'ETN', 'EIX', 'EA', 'EMR', 'ETR', 'EQT', 'EQIX', 'ESS', 'ES', 'EXPE',
-                   'ESRX', 'FFIV', 'FAST', 'FIS', 'FE', 'FLIR', 'FLR', 'FTI', 'BEN', 'GPS', 'GD', 'GGP', 'GPC', 'GILD', 'GT', 'GWW', 'HBI',
-                   'HRS', 'HAS', 'HCP', 'HP', 'HPQ', 'HON', 'HST', 'HUM', 'ITW', 'INTC', 'IBM', 'IPG', 'INTU', 'IVZ', 'JEC', 'JNJ', 'JPM',
-                   'KSU', 'KEY', 'KMB', 'KLAC', 'KR', 'LLL', 'LRCX', 'LEG', 'LUK', 'LNC', 'LMT', 'LOW', 'MTB', 'M', 'MRO', 'MAR', 'MLM', 'MA',
-                   'MKC', 'MCK', 'MDT', 'MET', 'MCHP', 'MSFT', 'TAP', 'MON', 'MCO', 'MOS', 'MYL', 'NOV', 'NTAP', 'NWL', 'NEM', 'NEE', 'NKE', 'NBL',
-                   'NSC', 'NOC', 'NUE', 'ORLY', 'OMC', 'ORCL', 'PCAR', 'PH', 'PAYX', 'PBCT', 'PEP', 'PRGO', 'PCG', 'PNW', 'PNC', 'PPG', 'PX', 'PCLN',
-                   'PG', 'PLD', 'PEG', 'PHM', 'PWR', 'DGX', 'RTN', 'RHT', 'RF', 'RHI', 'COL', 'ROST', 'CRM', 'SCG', 'STX', 'SRE', 'SPG', 'SLG', 'SNA',
-                   'LUV', 'SWK', 'SBUX', 'STT', 'SYK', 'SYMC', 'TROW', 'TXN', 'HSY', 'TMO', 'TWX', 'TJX', 'TSS', 'TSN', 'VLO', 'VTR', 'VZ', 'VIAB', 'VNO',
-                   'WMT', 'DIS', 'WAT', 'WFC', 'WY', 'WMB', 'WYN', 'XEL', 'XLNX', 'YUM', 'ZION',
-                   'AES', 'AFL', 'APD', 'ALXN', 'ALL', 'AMZN', 'AXP', 'ABC', 'APC', 'AIV', 'T', 'AVY', 'BAC', 'BBT', 'BBY', 'BA',
-                   'BMY', 'CA', 'COF', 'CCL', 'CELG', 'CF', 'CMG', 'CINF', 'CTXS', 'CMA', 'COP', 'STZ', 'CSX', 'DHR', 'DVN', 'D',
-                   'EMN', 'EW', 'EOG', 'EQR', 'EXC', 'XOM', 'FDX', 'FISV', 'FMC', 'FCX', 'GRMN', 'GIS', 'GS', 'HAL', 'HIG', 'HCN',
-                   'HD', 'HBAN', 'ICE', 'IFF', 'IRM', 'JCI', 'JNPR', 'KIM', 'KSS', 'LH', 'LEN', 'LLY', 'MAC', 'MMC', 'MAT', 'MRK',
-                   'MU', 'MDLZ', 'MS', 'NDAQ', 'NFLX', 'NI', 'JWN', 'NRG', 'OXY', 'PDCO', 'PKI', 'PXD', 'RL', 'PFG', 'PRU', 'PVH',
-                   'QCOM', 'O', 'RSG', 'ROK', 'SLB', 'SEE', 'SWKS', 'SO', 'SRCL', 'SYY', 'TXT', 'TIF', 'TMK', 'VAR', 'VRTX', 'VMC',
-                   'WM', 'WDC', 'WEC', 'XRX', 'ZBH',
-                   'A', 'AAL', 'AMGN', 'ADM', 'BXP', 'HSIC', 'CTL', 'CI', 'CME', 'COST', 'DVA', 'EBAY', 'EFX', 'EXPD', 'FITB', 'FLS', 'GE', 'GOOGL',
-                   'HOG', 'HES', 'IR', 'ISRG', 'K', 'MAS', 'MHK', 'MSI', 'NFX', 'NTRS', 'OKE', 'PNR', 'PFE', 'PPL', 'PGR', 'RRC', 'ROP', 'SHW', 'STI', 'TRV', 'TSCO', 'VRSN', 'WBA', 'WYNN',
-                    'AMT', 'AON', 'CBG', 'CSCO', 'CVS', 'EL', 'F', 'HRL', 'IP', 'MCD', 'MNST', 'NVDA', 'PSA', 'REGN', 'SJM', 'TGT', 'ANTM', 'XL',
-                    'ADP', 'CHK', 'JBHT','CL', 'ECL', 'L','LB','WHR'
-                   ]
-
-
-start = pd.to_datetime('2009-01-01').tz_localize('US/Eastern')
-end = pd.to_datetime('2018-12-01').tz_localize('US/Eastern')
 # Create algorithm object passing in initialize and
 # handle_data functions
 #['BAC', 'GNW', 'IPG', 'HOG', 'JPM', 'HCN', 'KSS', 'MDLZ']
 #['BAC', 'INTC', 'SPLS', 'PFE', 'HPQ', 'JPM', 'IPG', 'TROW']
 
-
-#test_string = ['HPQ']
-model_list = ['SVM','KNeighbors','DecisionTree','RandomForest','LogisticRegression']
-for ele in test_string:
+for ele in SnPList:
     SYMBOL = ele
     if(os.path.isfile(('output/'+SYMBOL+'_SVM_output.csv'))):
         print('output/'+SYMBOL+'_SVM_output.csv is exist')
         continue
     else:
         print('output/' + SYMBOL + '_SVM_output.csv is not exist')
-    for model_name in model_list:
-        MODEL_NAME = model_name
-        perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
 
-        # Print
-        perf_manual.to_csv('output/'+SYMBOL+'_'+MODEL_NAME+'_output.csv')
+    perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
 
+    # Print
+    perf_manual.to_csv('output/'+SYMBOL+'_SVM_output.csv')
 
 
 

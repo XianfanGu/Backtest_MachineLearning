@@ -1,7 +1,7 @@
 """
 This is a template algorithm on Quantopian for you to adapt and fill in.
 """
-from toollib.TA.TA_indicator import TA
+from toollib.Data.TA import TA
 from zipline.api import (symbol, set_benchmark, set_long_only, schedule_function, date_rules, time_rules)
 from zipline import run_algorithm
 # Pandas library: https://pandas.pydata.org/
@@ -72,7 +72,7 @@ def rebalance(context, data):
         context.init = 1
     else:
         context.time_series.appendDate(recent_dates)
-    context.time_series.addFeature(['PM','EMA','OBV', 'MA', 'MACD','STOCH', 'CCI', 'AD'], recent_dates, recent_prices, recent_volume, recent_high, recent_low)
+    context.time_series.addFeature(['PM','EMA','OBV', 'MA', 'MACD','STOCH', 'CCI', 'AD'], recent_dates, [recent_prices, recent_volume, recent_high, recent_low])
     print(context.time_series.training_window)
 
 

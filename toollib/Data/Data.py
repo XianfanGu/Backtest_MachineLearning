@@ -6,7 +6,7 @@ class Data(ABC):
         pass
 
     @abstractmethod
-    def addFeature(self, ta_list, dates, price, high, low):
+    def addFeature(self, feature_name_list, dates, inputs):
         pass
 
     @abstractmethod

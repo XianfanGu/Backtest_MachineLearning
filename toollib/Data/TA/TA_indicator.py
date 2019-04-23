@@ -16,7 +16,11 @@ class TA(Data):
             if not i.date() in timestamp_:
                 self.training_window = self.training_window.append({'timestamp':i.date()},ignore_index=True)
 
-    def addFeature(self, ta_list, dates, price, volume, high, low):
+    def addFeature(self, ta_list, dates, inputs):
+        price = inputs[0]
+        volume = inputs[1]
+        high = inputs[2]
+        low = inputs[3]
         if 'PM' in ta_list:
             re,exist_ = self.calcPM(dates, price)
             #print(re)

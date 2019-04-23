@@ -24,13 +24,14 @@ from talib import RSI, BBANDS, OBV, EMA, MA, MACD,STOCH, CCI, AD
 import matplotlib.pyplot as plt
 import numpy as np
 import difflib as dif
+from toollib.Data.info import Info
 import urllib
 from io import StringIO
 import csv
 import datetime as dt
 N_PRIN_COMPONENTS = 7
 SYMBOL = 'SPY'
-pathname = 'doc/constituents.csv'
+pathname = 'src/constituents.csv'
 def initialize(context):
     """
     Called once at the start of the algorithm.
@@ -85,7 +86,7 @@ def initialize(context):
     context.model1 = LogisticRegression(random_state=0, solver='lbfgs', multi_class='multinomial')
     #context.model = KMeans(n_clusters=8, init='k-means++', max_iter=300, tol=1e-4, random_state=0)
     context.model = DBSCAN(eps=0.2,min_samples=3,metric='euclidean')
-    context.sector = readCSV(pathname)
+    context.sector = (Info(pathname)).info
     context.lookback = 350  # Look back 62 days
     context.history_range = 350  # Only consider the past 400 days' history
     context.threshold = 4.05
@@ -266,17 +267,7 @@ def create_model(context, data):
     return 1
 
 #create dictionary for sectors, read sectors from csv
-def readCSV(pathname):
-    n = 0
-    mydict = {}
-    with open(pathname, mode='r') as infile:
-        reader = csv.reader(infile)
-        for rows in reader:
-            if not n == 0:
-                mydict[rows[0]] = rows[2]
-            else:
-                n = 1
-    return mydict
+
 def iterateCreateID(namelist):
     idDict= {}
     valDict = {}
