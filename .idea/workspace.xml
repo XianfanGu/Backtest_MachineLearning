@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ca21b6-94ee-46d5-a650-60365e49aaf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,14 +12,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toollib/algorithm/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="3870">
               <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
               <folding>
                 <element signature="e#81#248#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="285">
+                <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -125,18 +132,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="216" column="8" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="8" />
-              <folding>
-                <element signature="e#81#248#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -183,7 +178,6 @@
         <option value="$PROJECT_DIR$/toollib/pair_trading/clustering_training.py" />
         <option value="$PROJECT_DIR$/doc/download.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/doc/extension.py" />
         <option value="$PROJECT_DIR$/toollib/Download/download_csv.py" />
         <option value="$PROJECT_DIR$/toollib/Data/Data.py" />
@@ -201,10 +195,11 @@
         <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" />
         <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" />
         <option value="$PROJECT_DIR$/toollib/algorithm/test.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="545" />
     <option name="y" value="129" />
     <option name="width" value="1512" />
@@ -232,19 +227,6 @@
               <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
               <item name="toollib" type="462c0819:PsiDirectoryNode" />
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="toollib" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="MachineLearning" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="toollib" type="462c0819:PsiDirectoryNode" />
-              <item name="Download" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -299,12 +281,12 @@
       <updated>1555316578297</updated>
       <workItem from="1555316584595" duration="7531000" />
       <workItem from="1555381166892" duration="14386000" />
-      <workItem from="1555467729103" duration="89738000" />
+      <workItem from="1555467729103" duration="89824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111655000" />
+    <option name="totallyTimeSpent" value="111741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="545" y="129" width="1512" height="1108" extended-state="0" />
@@ -494,16 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -551,26 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Data/Data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_pca.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="33" />
-          <folding>
-            <element signature="e#81#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -611,16 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -641,13 +583,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Data/Data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/pair_trading/clustering_iteration_pca.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="33" />
+          <folding>
+            <element signature="e#81#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/toollib/algorithm/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="3870">
           <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
           <folding>
             <element signature="e#81#248#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

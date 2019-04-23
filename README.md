@@ -17,4 +17,4 @@ the project is base on Zipline backtest platform, see the Zipline: http://www.zi
 
 
 ### Step 3: Run Backtest  ###
-`python toollib/Backtest/test.py`
+`python toollib/algorithm/test.py`
