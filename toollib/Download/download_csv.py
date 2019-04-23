@@ -31,7 +31,9 @@ def format_file(symbol):
             inp.seek(0)
             lastrow = None
             for lastrow in csv.reader(inp): pass
-            if(datetime.strptime(lastrow[0], DT_FORMAT)>START_DATE):
+            inp.seek(0)
+            firstrow = csv.reader(inp)[0]
+            if(datetime.strptime(lastrow[0], DT_FORMAT)>START_DATE and datetime.strptime(firstrow[0], DT_FORMAT)<END_DATE):
                 os.remove('csv/daily/'+symbol+'.csv')
                 print("File Removed!",'  '+'csv/daily/'+symbol+'.csv')
                 return False
