@@ -25,6 +25,7 @@ def format_file(symbol):
     try:
         with open('csv/daily/'+symbol+'.csv', "r") as inp:
             START_DATE = datetime.strptime("2006-10-01", DT_FORMAT)
+            END_DATE = datetime.strptime("2019-04-20", DT_FORMAT)
             #print(START_DATE)
 
             inp.seek(0)
@@ -41,7 +42,7 @@ def format_file(symbol):
                     continue
                 DATE = datetime.strptime(row[0], DT_FORMAT)
                 #print(DATE)
-                if(DATE>=START_DATE):
+                if(DATE >= START_DATE) and (DATE <= END_DATE):
                     body.append(row)
 
         with open('csv/daily/'+symbol+'.csv', "w") as out:
