@@ -11,10 +11,10 @@ min_size = 200000
 max_size = 300000
 QUERY_URL_CSV = "https://www.alphavantage.co/query?function={REQUEST_TYPE}&from_symbol={FROM_SYM}&to_symbol={TO_SYM}&interval={TIME}&outputsize=full&datatype=csv&apikey={KEY}"
 API_KEY = "VKNYIAEYDFJGF1RS"
-
+root_path = 'csv/currency/intraday/'
 def _request_csv(req_type, from_symbol, to_symbol, interval):
     try:
-        urllib.request.urlretrieve(QUERY_URL_CSV.format(REQUEST_TYPE=req_type, KEY=API_KEY, FROM_SYM = from_symbol, TO_SYM = to_symbol, TIME = interval), 'csv/intraday/'+from_symbol+to_symbol+'.csv')
+        urllib.request.urlretrieve(QUERY_URL_CSV.format(REQUEST_TYPE=req_type, KEY=API_KEY, FROM_SYM = from_symbol, TO_SYM = to_symbol, TIME = interval), root_path +from_symbol+to_symbol+'.csv')
     except urllib.error.HTTPError as ex:
         print('Problem:', ex)
 
@@ -23,7 +23,7 @@ def _request_csv(req_type, from_symbol, to_symbol, interval):
 def format_file(symbol):
     body = []
     try:
-        with open('csv/currency/intraday/'+symbol+'.csv', "r") as inp:
+        with open(root_path+symbol+'.csv', "r") as inp:
             START_DATE = datetime.strptime("2006-10-02 22:00:00", DT_FORMAT)
             END_DATE = datetime.strptime("2019-04-18 20:00:00", DT_FORMAT)
             #print(START_DATE)
@@ -37,8 +37,8 @@ def format_file(symbol):
                 n = n + 1
             print(firstrow)
             if(datetime.strptime(lastrow[0], DT_FORMAT)>START_DATE or datetime.strptime(firstrow[0], DT_FORMAT)<END_DATE):
-                os.remove('csv/currency/intraday/'+symbol+'.csv')
-                print("File Removed!",'  '+'csv/currency/intraday/'+symbol+'.csv')
+                os.remove(root_path+symbol+'.csv')
+                print("File Removed!",'  '+root_path+symbol+'.csv')
                 return False
             inp.seek(0)
             for row in csv.reader(inp):
@@ -50,7 +50,7 @@ def format_file(symbol):
                 if(DATE >= START_DATE) and (DATE <= END_DATE):
                     body.append(row)
 
-        with open('csv/currency/intraday/'+symbol+'.csv', "w") as out:
+        with open(root_path+symbol+'.csv', "w") as out:
             writer = csv.writer(out)
             for row in body:
                 writer.writerow(row)
@@ -59,23 +59,23 @@ def format_file(symbol):
     except Exception as error:
         pass
 
-    os.remove('csv/currency/intraday/' + symbol + '.csv')
-    print("File Removed!", '  '+'csv/currency/intraday/' + symbol + '.csv')
+    os.remove(root_path + symbol + '.csv')
+    print("File Removed!", '  '+ root_path + symbol + '.csv')
     print('Caught this error: format is not correct')
     return False
 
 def checkFileSize(symbol):
     try:
         #dir_path = os.path.dirname(os.path.realpath(__file__))
-        statinfo = os.path.getsize('csv/currency/intraday/' + symbol +'.csv')
-        print('csv/currency/intraday/' + symbol +'.csv :'+statinfo.__str__())
+        statinfo = os.path.getsize(root_path + symbol +'.csv')
+        print(root_path + symbol +'.csv :'+statinfo.__str__())
         if(statinfo <= min_size) or (statinfo >= max_size):
             return False
         else:
             return True
     except Exception as error:
         pass
-    print("this file is not exist: " + 'csv/currency/intraday/' + symbol + '.csv')
+    print("this file is not exist: " + root_path + symbol + '.csv')
     return False
 
 
