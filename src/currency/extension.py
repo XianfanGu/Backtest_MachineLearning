@@ -9,7 +9,7 @@ register(
     'custom-currency-csvdir-bundle',
     csvdir_equities(
         ['intraday'],
-	'/home/sustechcs/Backtest_MachineLearning/src/currency/csv',
+	'/home/sustechcs/Backtest_MachineLearning/csv/currency',
     ),
     calendar_name='NYSE',  # US equities
     start_session=start,

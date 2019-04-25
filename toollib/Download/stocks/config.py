@@ -9,7 +9,7 @@ def create_config():
 
     with open(cwd+"/src/stocks/extension.py","r+") as f1:
         f1.seek(0)
-        lines[11] = '\t\''+cwd+"/csv"+'\',\n'
+        lines[11] = '\t\''+cwd+"/csv/stocks"+'\',\n'
         for line in lines:
             f1.write(line)
         f1.truncate()
