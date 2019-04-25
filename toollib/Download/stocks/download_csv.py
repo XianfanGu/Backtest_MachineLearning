@@ -21,7 +21,7 @@ root_path = 'csv/stocks/daily/'
 
 def _request_csv(symbol, req_type):
     try:
-        urllib.request.urlretrieve(QUERY_URL_CSV.format(REQUEST_TYPE=req_type, KEY=API_KEY, SYMBOL=symbol), 'csv/daily/'+symbol+'.csv')
+        urllib.request.urlretrieve(QUERY_URL_CSV.format(REQUEST_TYPE=req_type, KEY=API_KEY, SYMBOL=symbol), root_path+symbol+'.csv')
     except urllib.error.HTTPError as ex:
         print('Problem:', ex)
 
