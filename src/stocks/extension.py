@@ -6,10 +6,10 @@ start = pd.Timestamp('2006-10-02', tz='utc')
 end = pd.Timestamp('2019-04-18', tz='utc')
 
 register(
-    'custom-na-csvdir-bundle',
+    'custom-stocks-csvdir-bundle',
     csvdir_equities(
         ['daily'],
-	'/home/sustechcs/Backtest_MachineLearning/csv',
+	'/home/sustechcs/Backtest_MachineLearning/src/csv/stocks',
     ),
     calendar_name='NYSE',  # US equities
     start_session=start,

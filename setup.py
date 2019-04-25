@@ -1,8 +1,10 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 from setuptools.command.develop import develop
 from setuptools.command.install import install
-import toollib.Download.download_csv as downloader
-import toollib.Download.config as config
+import toollib.Download.currency.download_csv as downloader1
+import toollib.Download.currency.config as config1
+import toollib.Download.stocks.download_csv as downloader
+import toollib.Download.stocks.config as config
 import sys
 def query_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
@@ -45,9 +47,12 @@ class PostInstallCommand(install):
     """Post-installation for installation mode."""
     def run(self):
         # PUT YOUR POST-INSTALL SCRIPT HERE or CALL A FUNCTION
-        if(query_yes_no("Do you try creating a new data bundle?")):
+        if(query_yes_no("Do you try creating a new stocks data bundle?")):
             downloader.download()
             config.create_config()
+        if(query_yes_no("Do you try creating a new currency data bundle?")):
+            downloader1.download()
+            config1.create_config()
         install.run(self)
 setup(
     # Needed to silence warnings (and to be a worthwhile package)

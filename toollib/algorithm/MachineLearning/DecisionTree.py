@@ -24,7 +24,8 @@ from toollib.Data.info import Info
 
 SYMBOL = ''
 SnPList = Info(pathname='src/constituents.csv').get_symbol_list()
-
+stocks_bundle = 'custom-stocks-csvdir-bundle'
+currency_bundle = 'custom-currency-csvdir-bundle'
 
 start = pd.to_datetime('2009-01-01').tz_localize('US/Eastern')
 end = pd.to_datetime('2018-12-01').tz_localize('US/Eastern')
@@ -208,7 +209,7 @@ try:
         else:
             print('output/' + SYMBOL + '_DecisionTree_output.csv is not exist')
 
-        perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
+        perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = stocks_bundle)
 
         # Print
         perf_manual.to_csv('output/'+SYMBOL+'_DecisionTree_output.csv')

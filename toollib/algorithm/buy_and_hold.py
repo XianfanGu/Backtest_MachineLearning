@@ -5,7 +5,8 @@ import math
 import numpy as np
 # Pandas library: https://pandas.pydata.org/
 import pandas as pd
-
+stocks_bundle = 'custom-stocks-csvdir-bundle'
+currency_bundle = 'custom-currency-csvdir-bundle'
 SYMBOL = ""
 # Called once at the start of the simulation.
 def initialize(context):
@@ -61,7 +62,7 @@ end = pd.to_datetime('2017-01-01').tz_localize('US/Eastern')
 for ele in test_string:
     SYMBOL = ele
 
-    perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=market_open, bundle = 'custom-na-csvdir-bundle')
+    perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=market_open, bundle = stocks_bundle)
 
     # Print
     perf_manual.to_csv('output/'+SYMBOL+'_BUY_HOLD_'+'_output.csv')

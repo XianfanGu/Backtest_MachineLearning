@@ -23,6 +23,8 @@ from toollib.Data.TA.TA_indicator import TA
 
 MODEL_NAME = ''
 SYMBOL = ''
+stocks_bundle = 'custom-stocks-csvdir-bundle'
+currency_bundle = 'custom-currency-csvdir-bundle'
 def initialize(context):
     """
     Called once at the start of the algorithm.
@@ -251,7 +253,7 @@ try:
             print('output/' + SYMBOL + '_SVM_output.csv is not exist')
         for model_name in model_list:
             MODEL_NAME = model_name
-            perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = 'custom-na-csvdir-bundle')
+            perf_manual = run_algorithm(start = start, end = end, capital_base = 10000000.0,  initialize=initialize, handle_data=rebalance, bundle = stocks_bundle)
 
             # Print
             perf_manual.to_csv('output/'+SYMBOL+'_'+MODEL_NAME+'_output.csv')
