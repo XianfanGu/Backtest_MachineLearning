@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87ca21b6-94ee-46d5-a650-60365e49aaf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asx200.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constituents.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/currency/extension.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stocks/extension.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/Download/currency/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Download/currency/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/Download/stocks/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Download/stocks/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/Download/stocks/download_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Download/stocks/download_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py" afterDir="false" />
-    </list>
+    <list default="true" id="87ca21b6-94ee-46d5-a650-60365e49aaf0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +15,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2381">
               <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toollib/analysis/plot_backtest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -243,13 +217,6 @@
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
               <item name="csv" type="462c0819:PsiDirectoryNode" />
-              <item name="currency" type="462c0819:PsiDirectoryNode" />
-              <item name="intraday" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="csv" type="462c0819:PsiDirectoryNode" />
               <item name="stocks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -274,12 +241,6 @@
               <item name="toollib" type="462c0819:PsiDirectoryNode" />
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="MachineLearning" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="toollib" type="462c0819:PsiDirectoryNode" />
-              <item name="analysis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
