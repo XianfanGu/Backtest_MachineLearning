@@ -8,8 +8,8 @@ from datetime import datetime
 from toollib.Data.info import Info
 
 
-SnP500 = Info(pathname='src/constituents.csv').get_symbol_list()
-ASX200 = Info(pathname='src/asx200.csv').get_symbol_list()
+SnP500 = Info(pathname='data/constituents.csv').get_symbol_list()
+ASX200 = Info(pathname='data/asx200.csv').get_symbol_list()
 
 DT_FORMAT = "%Y-%m-%d"
 min_size = 200000
@@ -54,7 +54,7 @@ def format_file(symbol):
                     continue
                 DATE = datetime.strptime(row[0], DT_FORMAT)
                 #print(DATE)
-                if(DATE >= START_DATE) and (DATE <= END_DATE):
+                if(DATE >= START_DATE):
                     body.append(row)
 
         with open(root_path+symbol+'.csv', "w") as out:

@@ -7,11 +7,11 @@ from time import sleep
 from datetime import datetime
 
 DT_FORMAT = "%Y-%m-%d %hh:%mm:%ss"
-min_size = 200000
-max_size = 300000
+min_size = 50591
+max_size = 90591
 QUERY_URL_CSV = "https://www.alphavantage.co/query?function={REQUEST_TYPE}&from_symbol={FROM_SYM}&to_symbol={TO_SYM}&interval={TIME}&outputsize=full&datatype=csv&apikey={KEY}"
 API_KEY = "VKNYIAEYDFJGF1RS"
-root_path = 'csv/currency/intraday/'
+root_path = 'csv/currency/minute/'
 def _request_csv(req_type, from_symbol, to_symbol, interval):
     try:
         urllib.request.urlretrieve(QUERY_URL_CSV.format(REQUEST_TYPE=req_type, KEY=API_KEY, FROM_SYM = from_symbol, TO_SYM = to_symbol, TIME = interval), root_path +from_symbol+to_symbol+'.csv')
@@ -24,31 +24,32 @@ def format_file(symbol):
     body = []
     try:
         with open(root_path+symbol+'.csv', "r") as inp:
-            START_DATE = datetime.strptime("2006-10-02 22:00:00", DT_FORMAT)
-            END_DATE = datetime.strptime("2019-04-18 20:00:00", DT_FORMAT)
+            #START_DATE = datetime.strptime("2019-04-02 22:00:00", DT_FORMAT)
+            #END_DATE = datetime.strptime("2019-04-18 20:00:00", DT_FORMAT)
             #print(START_DATE)
 
             inp.seek(0)
             lastrow = None
             n = 0
             for lastrow in csv.reader(inp):
-                if(n==1):
+                if(n==0):
                     firstrow = lastrow
                 n = n + 1
             print(firstrow)
-            if(datetime.strptime(lastrow[0], DT_FORMAT)>START_DATE or datetime.strptime(firstrow[0], DT_FORMAT)<END_DATE):
-                os.remove(root_path+symbol+'.csv')
-                print("File Removed!",'  '+root_path+symbol+'.csv')
+            if (firstrow[0] != 'timestamp'):
+                os.remove(root_path + symbol + '.csv')
+                print("File Removed!", '  ' + root_path + symbol + '.csv')
+                print('Caught this error: format is not correct')
                 return False
+
             inp.seek(0)
             for row in csv.reader(inp):
                 if(row[0]=='timestamp'):
+                    row.append('volume')
                     body.append(row)
                     continue
-                DATE = datetime.strptime(row[0], DT_FORMAT)
-                #print(DATE)
-                if(DATE >= START_DATE) and (DATE <= END_DATE):
-                    body.append(row)
+                row.append(0.0)
+                body.append(row)
 
         with open(root_path+symbol+'.csv', "w") as out:
             writer = csv.writer(out)

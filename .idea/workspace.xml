@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ca21b6-94ee-46d5-a650-60365e49aaf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/currency/extension.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/currency/extension.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stocks/extension.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/stocks/extension.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asx200.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constituents.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/currency/extension.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stocks/extension.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/toollib/Download/currency/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Download/currency/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/toollib/Download/stocks/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Download/stocks/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toollib/Download/stocks/download_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/Download/stocks/download_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,45 +25,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toollib/Download/currency/download_csv.py">
+        <entry file="file://$PROJECT_DIR$/toollib/algorithm/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2381">
+              <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/currency/extension.py">
+        <entry file="file://$PROJECT_DIR$/toollib/analysis/plot_backtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/stocks/extension.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="1139">
+              <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toollib/Download/stocks/download_csv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-611">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,13 +58,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="285">
-                <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/toollib/algorithm/buy_and_hold.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-341">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#148#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toollib/Download/stocks/download_csv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toollib/Download/stocks/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state relative-caret-position="240">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -96,11 +93,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/toollib/Download/currency/download_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="45" />
+            <state relative-caret-position="375">
+              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <element signature="e#81#248#0" expanded="true" />
               </folding>
@@ -109,17 +118,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/asx200.csv">
+        <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2506" />
+            <state relative-caret-position="375">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+              <folding>
+                <element signature="e#81#248#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/toollib/Download/currency/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="45" />
+            <state relative-caret-position="225">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -180,25 +194,25 @@
         <option value="$PROJECT_DIR$/toollib/Data/Data.py" />
         <option value="$PROJECT_DIR$/toollib/analysis/plot_backtest.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py" />
-        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" />
-        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" />
-        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py" />
-        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py" />
         <option value="$PROJECT_DIR$/toollib/algorithm/buy_and_hold.py" />
         <option value="$PROJECT_DIR$/toollib/algorithm/test.py" />
-        <option value="$PROJECT_DIR$/toollib/Download/stocks/download_csv.py" />
         <option value="$PROJECT_DIR$/toollib/Download/currency/download_csv.py" />
-        <option value="$PROJECT_DIR$/toollib/Download/currency/config.py" />
         <option value="$PROJECT_DIR$/src/currency/extension.py" />
         <option value="$PROJECT_DIR$/src/stocks/extension.py" />
+        <option value="$PROJECT_DIR$/toollib/Download/stocks/download_csv.py" />
+        <option value="$PROJECT_DIR$/toollib/Download/currency/config.py" />
+        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py" />
+        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py" />
+        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py" />
+        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py" />
+        <option value="$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py" />
         <option value="$PROJECT_DIR$/toollib/Download/stocks/config.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="448" />
-    <option name="y" value="610" />
+    <option name="x" value="1242" />
+    <option name="y" value="561" />
     <option name="width" value="2208" />
     <option name="height" value="1108" />
   </component>
@@ -242,23 +256,6 @@
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
               <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
               <item name="output_img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="currency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backtest_MachineLearning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="stocks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Backtest_MachineLearning" type="b2602c69:ProjectViewProjectNode" />
@@ -326,7 +323,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test/Backtest_MachineLearning/toollib/Download/currency" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -370,15 +367,15 @@
       <updated>1555316578297</updated>
       <workItem from="1555316584595" duration="7531000" />
       <workItem from="1555381166892" duration="14386000" />
-      <workItem from="1555467729103" duration="112342000" />
+      <workItem from="1555467729103" duration="115023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134259000" />
+    <option name="totallyTimeSpent" value="136940000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="448" y="610" width="2208" height="1108" extended-state="0" />
+    <frame x="1242" y="561" width="2208" height="1108" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25716928" />
@@ -560,16 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/analysis/plot_backtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3330">
-          <caret line="222" column="17" lean-forward="true" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/csv/currency/5min/test.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -581,92 +568,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/toollib/Download/stocks/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="213" column="158" selection-start-line="213" selection-start-column="158" selection-end-line="213" selection-end-column="158" />
-          <folding>
-            <element signature="e#81#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
-          <folding>
-            <element signature="e#81#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/algorithm/buy_and_hold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="49" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="8" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/algorithm/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2336">
-          <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="45" />
-          <folding>
-            <element signature="e#81#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Data/TA/TA_indicator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#335#568#0" />
-            <element signature="e#2864#4356#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Data/Data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="65" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="25" selection-end-column="65" />
-          <folding>
-            <element signature="e#81#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Data/info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/constituents.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -684,69 +585,9 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="285">
-            <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="45" />
-          <folding>
-            <element signature="e#81#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Download/stocks/download_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-611">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Download/stocks/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Download/currency/download_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/toollib/Download/currency/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,6 +604,162 @@
           <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Data/info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Data/Data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Data/TA/TA_indicator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3176">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#335#568#0" />
+            <element signature="e#2864#4356#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/DecisionTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#81#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/knn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-840">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#81#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/LogisticRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#81#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/RandomForest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#81#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/algorithm/MachineLearning/svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#81#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/algorithm/buy_and_hold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-341">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/algorithm/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2381">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/analysis/plot_backtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="222" column="17" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Download/currency/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Download/stocks/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Download/stocks/download_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toollib/Download/currency/download_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

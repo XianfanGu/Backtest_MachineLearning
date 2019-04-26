@@ -23,7 +23,7 @@ from toollib.Data.TA.TA_indicator import TA
 from toollib.Data.info import Info
 
 SYMBOL = ''
-SnPList = Info(pathname='src/constituents.csv').get_symbol_list()
+SnPList = Info(pathname='data/constituents.csv').get_symbol_list()
 stocks_bundle = 'custom-stocks-csvdir-bundle'
 currency_bundle = 'custom-currency-csvdir-bundle'
 
