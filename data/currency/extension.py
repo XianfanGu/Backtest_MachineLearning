@@ -11,6 +11,6 @@ register(
         ['minute'],
 	'/home/sustechcs/test/Backtest_MachineLearning/csv/currency',
     ),
-	calendar_name='CME',  # US equities
+	calendar_name='24/7', #AlwaysOpenCalendar
 
 )
