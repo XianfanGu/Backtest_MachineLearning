@@ -7,7 +7,7 @@ from time import sleep
 from datetime import datetime
 
 DT_FORMAT = "%Y-%m-%d %hh:%mm:%ss"
-min_size = 50591
+min_size = 5591
 max_size = 90591
 QUERY_URL_CSV = "https://www.alphavantage.co/query?function={REQUEST_TYPE}&from_symbol={FROM_SYM}&to_symbol={TO_SYM}&interval={TIME}&outputsize=full&datatype=csv&apikey={KEY}"
 API_KEY = "VKNYIAEYDFJGF1RS"
